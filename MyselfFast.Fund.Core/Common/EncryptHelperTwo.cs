@@ -1,0 +1,217 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace myselfFast.Fund.Core.Common
+{
+    /**********************************************************************************
+     *项目名称	：myself_SSO_Common.Helper
+     *项目描述  ：
+     *类名称    ：EncryptHelper
+     *版本号    ：v1.0.0
+     *机器名称  ：LIUYONG-PC
+     *项目名称  : EncryptHelper
+     *CLR版本   : 4.0.30319.42000
+     *作者      ：liu.yong
+     *创建时间  : 2016/11/18 15:35:21
+     *------------------------------------变更记录--------------------------------------
+     *变更描述  :
+     *变更作者  :
+     *变更时间  :
+    ***********************************************************************************/
+    public class EncryptHelperTwo
+    {
+        //默认密钥
+        private static string HmacKey = "dfjsidjfdsfjksd*76f";
+        public static string AesKey
+        {
+            get
+            {
+                return System.Configuration.ConfigurationManager.AppSettings["ticketkey"];
+            }
+        }
+        public static string DesKey
+        {
+            get
+            {
+                return System.Configuration.ConfigurationManager.AppSettings["ticketiv"];
+            }
+        }
+        /// <summary> 
+        /// AES加密 
+        /// </summary>
+        public static string AesEncrypt(string value, string aeskey = null)
+        {
+            if (string.IsNullOrEmpty(aeskey))
+            {
+                aeskey = AesKey;
+            }
+
+            byte[] keyArray = Encoding.UTF8.GetBytes(aeskey);
+            byte[] toEncryptArray = Encoding.UTF8.GetBytes(value);
+
+            RijndaelManaged rDel = new RijndaelManaged();
+            rDel.Key = keyArray;
+            rDel.Mode = CipherMode.ECB;
+            rDel.Padding = PaddingMode.PKCS7;
+
+            ICryptoTransform cTransform = rDel.CreateEncryptor();
+            byte[] resultArray = cTransform.TransformFinalBlock(toEncryptArray, 0, toEncryptArray.Length);
+
+            return Convert.ToBase64String(resultArray, 0, resultArray.Length);
+        }
+        public static string MD5One(string str)
+        {
+            byte[] buffer1 = System.Text.Encoding.UTF8.GetBytes(str);
+            buffer1 = new System.Security.Cryptography.MD5CryptoServiceProvider().ComputeHash(buffer1);
+            string text1 = "";
+            for (int num1 = 0; num1 < buffer1.Length; num1++)
+            {
+                text1 = text1 + buffer1[num1].ToString("x").PadLeft(2, '0');
+            }
+            return text1;
+        }
+        public static string MD5Two(string text)
+        {
+            var md5 = System.Security.Cryptography.MD5.Create();
+            //var buffer = md5.ComputeHash(Encoding.UTF8.GetBytes(text + "@wsxzaq1"));
+            var buffer = md5.ComputeHash(Encoding.UTF8.GetBytes(text));
+            var sb = new StringBuilder();
+            foreach (var t in buffer)
+            {
+                sb.AppendFormat("{0:x2}", t);
+            }
+            return sb.ToString();
+        }
+        /// <summary> 
+        /// AES解密 
+        /// </summary>
+        public static string AesDecrypt(string value, string aeskey = null)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(aeskey))
+                {
+                    aeskey = AesKey;
+                }
+                byte[] keyArray = Encoding.UTF8.GetBytes(aeskey);
+                byte[] toEncryptArray = Convert.FromBase64String(value);
+
+                RijndaelManaged rDel = new RijndaelManaged();
+                rDel.Key = keyArray;
+                rDel.Mode = CipherMode.ECB;
+                rDel.Padding = PaddingMode.PKCS7;
+
+                ICryptoTransform cTransform = rDel.CreateDecryptor();
+                byte[] resultArray = cTransform.TransformFinalBlock(toEncryptArray, 0, toEncryptArray.Length);
+
+                return Encoding.UTF8.GetString(resultArray);
+            }
+            catch
+            {
+                return string.Empty;
+            }
+        }
+
+        /// <summary> 
+        /// DES加密 
+        /// </summary>
+        public static string DesEncrypt(string value, string deskey = null)
+        {
+            if (string.IsNullOrEmpty(deskey))
+            {
+                deskey = DesKey;
+            }
+
+            byte[] keyArray = Encoding.UTF8.GetBytes(deskey);
+            byte[] toEncryptArray = Encoding.UTF8.GetBytes(value);
+
+            DESCryptoServiceProvider rDel = new DESCryptoServiceProvider();
+            rDel.Key = keyArray;
+            rDel.Mode = CipherMode.ECB;
+            rDel.Padding = PaddingMode.PKCS7;
+
+            ICryptoTransform cTransform = rDel.CreateEncryptor();
+            byte[] resultArray = cTransform.TransformFinalBlock(toEncryptArray, 0, toEncryptArray.Length);
+
+            return Convert.ToBase64String(resultArray, 0, resultArray.Length);
+        }
+
+        /// <summary> 
+        /// DES解密 
+        /// </summary>
+        public static string DesDecrypt(string value, string deskey = null)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(deskey))
+                {
+                    deskey = DesKey;
+                }
+                byte[] keyArray = Encoding.UTF8.GetBytes(deskey);
+                byte[] toEncryptArray = Convert.FromBase64String(value);
+
+                DESCryptoServiceProvider rDel = new DESCryptoServiceProvider();
+                rDel.Key = keyArray;
+                rDel.Mode = CipherMode.ECB;
+                rDel.Padding = PaddingMode.PKCS7;
+
+                ICryptoTransform cTransform = rDel.CreateDecryptor();
+                byte[] resultArray = cTransform.TransformFinalBlock(toEncryptArray, 0, toEncryptArray.Length);
+
+                return Encoding.UTF8.GetString(resultArray);
+            }
+            catch
+            {
+                return string.Empty;
+            }
+        }
+
+        public static string Md5(string value)
+        {
+            byte[] result = Encoding.UTF8.GetBytes(value);
+            MD5 md5 = new MD5CryptoServiceProvider();
+            byte[] output = md5.ComputeHash(result);
+            return BitConverter.ToString(output).Replace("-", "");
+        }
+
+        public static string HmacMd5(string value, string hmacKey)
+        {
+            if (string.IsNullOrEmpty(hmacKey))
+            {
+                hmacKey = HmacKey;
+            }
+            HMACSHA1 hmacsha1 = new HMACSHA1(Encoding.UTF8.GetBytes(hmacKey));
+            byte[] result = System.Text.Encoding.UTF8.GetBytes(value);
+            byte[] output = hmacsha1.ComputeHash(result);
+
+
+            return BitConverter.ToString(output).Replace("-", "");
+        }
+
+        /// <summary>
+        /// base64编码
+        /// </summary>
+        /// <returns></returns>
+        public static string Base64Encode(string value)
+        {
+            string result = Convert.ToBase64String(Encoding.Default.GetBytes(value));
+            return result;
+        }
+        /// <summary>
+        /// base64解码
+        /// </summary>
+        /// <returns></returns>
+        public static string Base64Decode(string value)
+        {
+            string result = Encoding.Default.GetString(Convert.FromBase64String(value));
+            return result;
+        }
+
+
+    }
+    
+}

@@ -1,0 +1,7 @@
+E:\阿里云服务器\CodeMe\个性化办公\MyselfFast.Fund\MyselfCollect\bin\Debug\MyselfCollect.dacpac
+E:\阿里云服务器\CodeMe\个性化办公\MyselfFast.Fund\MyselfCollect\obj\Debug\Model.xml
+E:\阿里云服务器\CodeMe\个性化办公\MyselfFast.Fund\MyselfCollect\obj\Debug\refactor.xml
+E:\阿里云服务器\CodeMe\个性化办公\MyselfFast.Fund\MyselfCollect\obj\Debug\postdeploy.sql
+E:\阿里云服务器\CodeMe\个性化办公\MyselfFast.Fund\MyselfCollect\obj\Debug\predeploy.sql
+E:\阿里云服务器\CodeMe\个性化办公\MyselfFast.Fund\MyselfCollect\obj\Debug\FescoCollect.dll
+E:\阿里云服务器\CodeMe\个性化办公\MyselfFast.Fund\MyselfCollect\obj\Debug\FescoCollect.pdb

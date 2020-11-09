@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<NewSystemConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LoggerQueueIsStart>true</LoggerQueueIsStart>
+  <DefaultScheduleTime>10</DefaultScheduleTime>
+  <ServiceAccount>
+    <AppKey>ElectricitySystem</AppKey>
+    <Appsecret>c5205611a0939282b3d72dac5f4383b1</Appsecret>
+    <!--<AppKey>NetworkApp</AppKey>
+    <Appsecret>dc79116859df79db9c7c77ed923a3703</Appsecret>-->
+    <IsUseToken>true</IsUseToken>
+    <!--<Environment>UAT</Environment>-->
+    <Environment>OFFICIAL</Environment>
+    <!--<Address>http://open.myself.com.cn/BSInterface.UAT/EmployeeService.aspx</Address>-->
+    <!-- <Address>http://open.myself.com.cn/BSInterface.Test/EmployeeService.aspx</Address>-->
+   <Address>http://service.myself.com.cn/BusinessSystemInterface/EmployeeService.aspx</Address>
+    <NewAddress>https://openapi.myself.com.cn/</NewAddress>
+  </ServiceAccount>
+  <PushToAppAccount>
+    <UserName>net2017@wqkj</UserName>
+    <Key>5443e50a302889a428528ecbafc301dc</Key>
+    <Url>https://www.lishaoping.com/appserver/message/receive</Url>
+    <Remind>感谢您的使用！祝您健康！</Remind>
+  </PushToAppAccount>
+  <MobileAuthenticationAccount>
+    <UserName>myselfnet</UserName>
+    <Key>bd088b79ccc3d5b1f659f979b667861c</Key>
+    <Url>https://fws.myself.com.cn/service/</Url>
+  </MobileAuthenticationAccount>
+ </NewSystemConfiguration>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerDiagram dslVersion="1.0.0.0" Id="ff90729e-6c8c-47db-a3fa-b16fc2c7f2e6" absoluteBounds="0, 0, 11, 8.5" name="权限验证堡垒转接组件设计">
+  <layerModelMoniker Id="c19d89e0-1990-44d8-a808-716ecf0ccd39" />
+  <nestedChildShapes>
+    <layerShape Id="657acb33-6e62-466e-8ece-123e22b26213" absoluteBounds="1.875, 1.125, 5.875, 0.75" customColor="161, 199, 231">
+      <layerMoniker Id="edc0a942-797d-4313-ac2d-0c85bcae224a" />
+    </layerShape>
+    <layerShape Id="065fa8de-b97f-4ac8-ab64-11cade219f47" absoluteBounds="1.875, 2.5, 5.875, 0.75" customColor="161, 199, 231">
+      <layerMoniker Id="24d49793-8a70-4740-95c9-24066f449f21" />
+    </layerShape>
+  </nestedChildShapes>
+</layerDiagram>

@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A6E5141E-7F20-47AD-ACE5-E2C93A6C28D6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FescoFast.Fund.Services</RootNamespace>
+    <AssemblyName>FescoFast.Fund.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=4.0.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Autofac.4.0.1\lib\net45\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Autofac.Mvc5.4.0.2\lib\net45\Autofac.Integration.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="NewSystem.SDK, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NewSystemSDK\NewSystem.SDK.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NPOI.2.3.0\lib\net40\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NPOI.2.3.0\lib\net40\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NPOI.2.3.0\lib\net40\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NPOI.2.3.0\lib\net40\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="Quartz">
+      <HintPath>..\packages\Quartz.2.6.1\lib\net40\Quartz.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\AdminAccountExtensions.cs" />
+    <Compile Include="Admin\AdminAccountHelper.cs" />
+    <Compile Include="Admin\AdminAccountService.cs" />
+    <Compile Include="Admin\AdminAcountRoleService.cs" />
+    <Compile Include="Admin\AdminDepartService.cs" />
+    <Compile Include="Admin\AdminMenuDataRolePrivilegeService.cs" />
+    <Compile Include="Admin\AdminMenuDataService.cs" />
+    <Compile Include="Admin\AdminMenuService.cs" />
+    <Compile Include="Admin\AdminPasswordSignHistoryService.cs" />
+    <Compile Include="Admin\AdminRoleDataRolePrivilegeService.cs" />
+    <Compile Include="Admin\AdminRoleDataService.cs" />
+    <Compile Include="Admin\AdminRolePrivilegeService.cs" />
+    <Compile Include="Admin\AdminRoleService.cs" />
+    <Compile Include="Admin\DepartService.cs" />
+    <Compile Include="Admin\IAdminAccountService.cs" />
+    <Compile Include="Admin\IAdminAcountRoleService.cs" />
+    <Compile Include="Admin\IAdminDepartService.cs" />
+    <Compile Include="Admin\IAdminMenuDataRolePrivilegeService.cs" />
+    <Compile Include="Admin\IAdminMenuDataService.cs" />
+    <Compile Include="Admin\IAdminMenuService.cs" />
+    <Compile Include="Admin\IAdminPasswordSignHistoryService.cs" />
+    <Compile Include="Admin\IAdminRoleDataRolePrivilegeService.cs" />
+    <Compile Include="Admin\IAdminRolePrivilegeService.cs" />
+    <Compile Include="Admin\IAdminRoleService.cs" />
+    <Compile Include="Admin\IDepartService.cs" />
+    <Compile Include="Admin\IAdminRoleDataService.cs" />
+    <Compile Include="Banner\IBannerHoleImgDataService.cs" />
+    <Compile Include="Banner\BannerHoleImgDataService.cs" />
+    <Compile Include="BaseService.cs" />
+    <Compile Include="Company\CompanyAppointmentService.cs" />
+    <Compile Include="Company\CompanyService.cs" />
+    <Compile Include="Company\CompanySubsidiesService.cs" />
+    <Compile Include="Company\CompanyUserService.cs" />
+    <Compile Include="Company\ICompanyAppointmentService.cs" />
+    <Compile Include="Company\ICompanyService.cs" />
+    <Compile Include="Company\ICompanySubsidiesService.cs" />
+    <Compile Include="Company\ICompanyUserService.cs" />
+    <Compile Include="Company\IVCompanyService.cs" />
+    <Compile Include="Company\VCompanyService.cs" />
+    <Compile Include="DTO\JqGridResult.cs" />
+    <Compile Include="DTO\Request\Banner\SelectBannerImgListRequestModel.cs" />
+    <Compile Include="DTO\Request\Hukousettled\SelectHukousettledRequestModel.cs" />
+    <Compile Include="DTO\Request\Hukou\SelectHukouRequestModel.cs" />
+    <Compile Include="DTO\Request\Peixun\SelectYuangongRequestModel.cs" />
+    <Compile Include="DTO\Request\Peixun\SelectXuexiqkRequestModel.cs" />
+    <Compile Include="DTO\Request\Peixun\SelectPeixunRequestModel.cs" />
+    <Compile Include="DTO\Request\Peixun\setAddCategoryModel.cs" />
+    <Compile Include="DTO\Request\Peixun\setDeleteCategory.cs" />
+    <Compile Include="DTO\Request\Peixun\setGetPlayInfo.cs" />
+    <Compile Include="DTO\Response\Banner\ResBannerImgListResponseModel.cs" />
+    <Compile Include="DTO\Response\Hukousettled\SelectHukousettledResponseModel.cs" />
+    <Compile Include="DTO\Response\Hukousettled\SpecdayResponseModel.cs" />
+    <Compile Include="DTO\Response\Hukou\ResHukouResponseModel.cs" />
+    <Compile Include="DTO\Response\Peixun\DeleteCategoryResponseModel.cs" />
+    <Compile Include="DTO\Response\Peixun\AddCategoryResponseModel.cs" />
+    <Compile Include="DTO\Response\Peixun\GetPlayInfoResponseModel.cs" />
+    <Compile Include="DTO\Response\Peixun\ResPeixunCozInfoResponseModel.cs" />
+    <Compile Include="DTO\Response\Peixun\ResPeixunLableResponseModel.cs" />
+    <Compile Include="DTO\Response\Peixun\ResYuangongResponseModel.cs" />
+    <Compile Include="DTO\Response\Peixun\ResPeixunxxqkResponseModel.cs" />
+    <Compile Include="HukousettledS\HukousettledDataService.cs" />
+    <Compile Include="HukousettledS\HukousettledSpecdayService.cs" />
+    <Compile Include="HukousettledS\IHukousettledDataService.cs" />
+    <Compile Include="HukousettledS\IHukousettledSpecdayService.cs" />
+    <Compile Include="HukouS\CaiwuDataVService.cs" />
+    <Compile Include="HukouS\CaoqiDataVService.cs" />
+    <Compile Include="HukouS\HukouDataVService.cs" />
+    <Compile Include="HukouS\ICaiwuDataVService.cs" />
+    <Compile Include="HukouS\ICaoqiDataVService.cs" />
+    <Compile Include="HukouS\IHukouDataVService.cs" />
+    <Compile Include="HukouS\IImportFileImpService.cs" />
+    <Compile Include="HukouS\ImportFileImpService.cs" />
+    <Compile Include="HukouS\IPictrueFileService.cs" />
+    <Compile Include="HukouS\ISendMessageService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HukouS\PictrueFileService.cs" />
+    <Compile Include="HukouS\SendMessageService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Infrastructure\DataDependencyRegistrar.cs" />
+    <Compile Include="Infrastructure\NewSDKDependencyRegistrar.cs" />
+    <Compile Include="Infrastructure\ServiceDependencyRegistrar.cs" />
+    <Compile Include="IBaseService.cs" />
+    <Compile Include="ModelExt\AppointRequestModel.cs" />
+    <Compile Include="ModelExt\InfoModel.cs" />
+    <Compile Include="ModelExt\LoginRequestModel.cs" />
+    <Compile Include="ModelExt\RequestAdminUserModel.cs" />
+    <Compile Include="ModelExt\RequestSysDicModel.cs" />
+    <Compile Include="Peixun\IImportFileImpService.cs" />
+    <Compile Include="Peixun\ImportFileImpService.cs" />
+    <Compile Include="Peixun\IYuangongService.cs" />
+    <Compile Include="Peixun\IXuexiqkService.cs" />
+    <Compile Include="Peixun\IPeixunService.cs" />
+    <Compile Include="Peixun\YuangongService.cs" />
+    <Compile Include="Peixun\XuexiqkService.cs" />
+    <Compile Include="Peixun\PeixunService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SystemFile\ISysExportFilesService.cs" />
+    <Compile Include="SystemFile\ISysImportFilesService.cs" />
+    <Compile Include="SystemFile\SysExportFilesService.cs" />
+    <Compile Include="SystemFile\SysImportFilesService.cs" />
+    <Compile Include="Sys\ISysDicService.cs" />
+    <Compile Include="Sys\SysDicService.cs" />
+    <Compile Include="Task\MyTestJob.cs" />
+    <Compile Include="Task\SchedulerManger.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ExportImport\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyselfFast.Fund.Core\MyselfFast.Fund.Core.csproj">
+      <Project>{94666936-6950-4385-8d02-7f318de8f32a}</Project>
+      <Name>MyselfFast.Fund.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyselfFast.Fund.Data\MyselfFast.Fund.Data.csproj">
+      <Project>{f12da99d-d6dd-476f-bcd3-97dc4d0b3c69}</Project>
+      <Name>MyselfFast.Fund.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PdfiumViewer\PdfiumViewer.csproj">
+      <Project>{438914b6-5d1c-482c-b942-5c0e057eef6f}</Project>
+      <Name>PdfiumViewer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebApiDebugTool\WebApiDebugTool.csproj">
+      <Project>{01e723e3-8179-4205-9590-233aae4d4d1d}</Project>
+      <Name>WebApiDebugTool</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

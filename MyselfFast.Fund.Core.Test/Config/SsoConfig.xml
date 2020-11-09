@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<IndividuationLoginConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>parent</Name>
+  <BaseUrl>http://passport.myself.com.cn</BaseUrl>
+  <IndividuationNodeList>
+    
+	<IndividuationEntity>
+      <Name>common</Name>
+      <LoginUrl>/Wx/Login</LoginUrl>
+      <LoginOutUrl>/Wx/SignOut</LoginOutUrl>
+      <RegisterUrl>registerurl-2</RegisterUrl>
+      <Description>description-2</Description>
+    </IndividuationEntity>
+   
+  </IndividuationNodeList>
+  <Description>description</Description>
+  <TicketCheckUrl>/api/TokenCheck</TicketCheckUrl>
+</IndividuationLoginConfig>

@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FS.Component.Infrastructure.AppDomainTypeFinder" Collapsed="true">
+    <Position X="0.5" Y="6.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAQAAAAAAIAAAAAIAQQAIACEAAEGAAAABoAAE=</HashCode>
+      <FileName>Infrastructure\AppDomainTypeFinder.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FescoFast.Infrastructure.EngineContext">
+    <Position X="7.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Infrastructure\EngineContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FescoFast.Infrastructure.FescoServiceEngine" BaseTypeListCollapsed="true">
+    <Position X="10.75" Y="4.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAABACBAQAAAAAAAAAAQAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Infrastructure\FescoServiceEngine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FescoFast.Infrastructure.Singleton&lt;T&gt;" Collapsed="true">
+    <Position X="2.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Infrastructure\Singleton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FescoFast.Infrastructure.SingletonList&lt;T&gt;" Collapsed="true">
+    <Position X="3.5" Y="3.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Infrastructure\Singleton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FescoFast.Infrastructure.SingletonDictionary&lt;TKey, TValue&gt;" Collapsed="true">
+    <Position X="0.5" Y="3.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Infrastructure\Singleton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FescoFast.Infrastructure.Singleton" Collapsed="true">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Infrastructure\Singleton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FescoFast.Infrastructure.WebAppTypeFinder" Collapsed="true">
+    <Position X="0.5" Y="7.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAACIgQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Infrastructure\WebAppTypeFinder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FS.Component.Infrastructure.DependencyManagement.ContainerManager" Collapsed="true">
+    <Position X="10.75" Y="1.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAEQAQAAACAACAAAAAAACAAAAAAAAAAAAEAgQAAAAA=</HashCode>
+      <FileName>Infrastructure\DependencyManagement\ContainerManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="FescoFast.Infrastructure.IEngine">
+    <Position X="10.75" Y="2.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAACAAQAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Infrastructure\IEngine.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="FescoFast.Infrastructure.IStartupTask" Collapsed="true">
+    <Position X="7.5" Y="3.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Infrastructure\IStartupTask.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="FescoFast.Infrastructure.ITypeFinder">
+    <Position X="0.5" Y="4.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Infrastructure\ITypeFinder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="FS.Component.Infrastructure.DependencyManagement.IDependencyRegistrar" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Infrastructure\DependencyManagement\IDependencyRegistrar.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

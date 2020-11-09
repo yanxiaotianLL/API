@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FDD3F92E-D715-4086-BD85-ED370D099526}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FescoFast.Fund.API.Framework</RootNamespace>
+    <AssemblyName>FescoFast.Fund.API.Framework</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Jil">
+      <HintPath>..\packages\Jil.2.15.0\lib\net45\Jil.dll</HintPath>
+    </Reference>
+    <Reference Include="LitJson2">
+      <HintPath>..\packages\LitJson2.1.0.0\lib\LitJson2.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.0\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.0\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\AuthorizationAttribute.cs" />
+    <Compile Include="Attributes\ComplexTypeAttribute.cs" />
+    <Compile Include="Attributes\CrossDomainAttribute.cs" />
+    <Compile Include="Attributes\CustomerApiExceptionFilterAttribute.cs" />
+    <Compile Include="Attributes\DynamicRequestAttribute.cs" />
+    <Compile Include="Attributes\IpAndDomainFilterAttribute.cs" />
+    <Compile Include="Attributes\JsonCallbackAttribute.cs" />
+    <Compile Include="Attributes\ModelCheckAttribute.cs" />
+    <Compile Include="Attributes\OutInRecodAttribute.cs" />
+    <Compile Include="Attributes\OutPutCacheAttribute.cs" />
+    <Compile Include="Attributes\OutPutCacheFilterAttribute.cs" />
+    <Compile Include="Attributes\SignCreateIgnoreAttribute.cs" />
+    <Compile Include="Attributes\TokenAuthenticationAttribute.cs" />
+    <Compile Include="Attributes\WxAttribute.cs" />
+    <Compile Include="AuthenticationManger.cs" />
+    <Compile Include="ClientCredentials\ClientCredentialsModel.cs" />
+    <Compile Include="ClientCredentials\DefaultClientCredentialsProviderFactory.cs" />
+    <Compile Include="ClientCredentials\DefaultCredentialsProvider.cs" />
+    <Compile Include="ClientCredentials\Extensition\HttpActionExtensition.cs" />
+    <Compile Include="ClientCredentials\Extensition\KeyValuePairExtensition.cs" />
+    <Compile Include="ClientCredentials\Extensition\ResponseBaseExtensiton.cs" />
+    <Compile Include="ClientCredentials\Extensition\ValidateExt.cs" />
+    <Compile Include="ClientCredentials\IClientCredentialsProvider.cs" />
+    <Compile Include="ClientCredentials\IClientCredentialsProviderFactory.cs" />
+    <Compile Include="Extensions\HttpRequestMessageExt.cs" />
+    <Compile Include="JilFormatter.cs" />
+    <Compile Include="JsonpMediaTypeFormatter.cs" />
+    <Compile Include="MessageHandler\AuthorizationMode.cs" />
+    <Compile Include="MessageHandler\IpAndDomanFilter\GlobalConfiguration.cs" />
+    <Compile Include="MessageHandler\IpAndDomanFilter\HttpRequestMessageExtensions.cs" />
+    <Compile Include="MessageHandler\IpAndDomanFilter\IpAndDomainConfiguration.cs" />
+    <Compile Include="MessageHandler\IpAndDomanFilter\IPAndDominFilterMessageHandler.cs" />
+    <Compile Include="MessageHandler\OutInRecodMessageHandler.cs" />
+    <Compile Include="MessageHandler\SignCheckMessageHandler.cs" />
+    <Compile Include="MessageHandler\TokenCheckMessageHandler.cs" />
+    <Compile Include="MessageHandler\VerificationResult.cs" />
+    <Compile Include="ModelBinders\CustomerParameterBinding.cs" />
+    <Compile Include="ModelBinders\JsonpMediaTypeFormatter.cs" />
+    <Compile Include="ModelBinders\ModelBinderTest.cs" />
+    <Compile Include="Models\RequestBase.cs" />
+    <Compile Include="Models\ResponseBase.cs" />
+    <Compile Include="Models\TokenRequest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TokenConfiguration.cs" />
+    <Compile Include="Token\DefaultTokenContainer.cs" />
+    <Compile Include="Token\ITokenContainer.cs" />
+    <Compile Include="Token\TokenAttribute.cs" />
+    <Compile Include="Token\TokenContainerFactory.cs" />
+    <Compile Include="Token\TokenModel.cs" />
+    <Compile Include="Token\TokenType.cs" />
+    <Compile Include="Validators\RequiredNumber.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="MessageHandler\MessageHandler.zip" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyselfFast.Fund.Core\MyselfFast.Fund.Core.csproj">
+      <Project>{94666936-6950-4385-8d02-7f318de8f32a}</Project>
+      <Name>MyselfFast.Fund.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyselfFast.Fund.Services\MyselfFast.Fund.Services.csproj">
+      <Project>{a6e5141e-7f20-47ad-ace5-e2c93a6c28d6}</Project>
+      <Name>MyselfFast.Fund.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

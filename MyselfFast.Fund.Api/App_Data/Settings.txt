@@ -1,0 +1,2 @@
+DataProvider: sqlserver
+DataConnectionString: Data Source=10.0.75.206;Initial Catalog=FesMvc407;Integrated Security=False;Persist Security Info=False;User ID=myselfhmse;Password=FC54AD8FB98D0DFA5FDC40ACF81A9DAA23FE22B79547D3C0

@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>MyselfCollect</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{52d63d15-ac2a-4585-839f-1aa42b0f93ba}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql110DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>FescoCollect</RootNamespace>
+    <AssemblyName>FescoCollect</AssemblyName>
+    <ModelCollation>2052,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>Chinese_PRC_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <!-- VS10 without SP1 will not have VisualStudioVersion set, so do that here -->
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <!-- Default to the v10.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\T_Admin_RoleData_RolePrivilege.sql" />
+    <Build Include="dbo\Tables\T_Admin_RoleData.sql" />
+    <Build Include="dbo\Tables\T_Admin_Role.sql" />
+    <Build Include="dbo\Tables\T_Admin_NS_Department.sql" />
+    <Build Include="dbo\Tables\T_Admin_MenuData_RolePrivilege.sql" />
+    <Build Include="dbo\Tables\T_Admin_MenuData.sql" />
+    <Build Include="dbo\Tables\T_Sys_PhoneCode.sql" />
+    <Build Include="dbo\Tables\T_Admin_Depart.sql" />
+    <Build Include="dbo\Tables\T_Admin_AcountRole.sql" />
+    <Build Include="dbo\Tables\T_Admin_Account.sql" />
+    <Build Include="dbo\Tables\T_JC_EmailHistory.sql" />
+    <Build Include="dbo\Tables\T_JC_DataItemTemp.sql" />
+    <Build Include="dbo\Tables\T_JC_DataItem.sql" />
+    <Build Include="dbo\Tables\T_JC_Account.sql" />
+    <Build Include="dbo\Tables\T_JC_SystemState.sql" />
+    <Build Include="dbo\Tables\T_JC_SMS_History.sql" />
+    <Build Include="dbo\Tables\T_JC_FundBussinessName.sql" />
+    <Build Include="dbo\Tables\D_JC_Address.sql" />
+    <Build Include="dbo\Tables\T_JC_BarcodeHistory.sql" />
+    <Build Include="dbo\Tables\__MigrationHistory.sql" />
+    <Build Include="dbo\Tables\T_Log_ApiInputLog.sql" />
+    <Build Include="dbo\Tables\T_JC_TaskInitLog.sql" />
+    <Build Include="dbo\Tables\T_JC_Task_Admin.sql" />
+    <Build Include="dbo\Tables\T_JC_File.sql" />
+    <Build Include="dbo\Tables\T_JC_Account_AttachData.sql" />
+    <Build Include="dbo\Tables\T_JC_Account_Visit_History.sql" />
+    <Build Include="dbo\Tables\T_Admin_Visit_History.sql" />
+    <Build Include="dbo\Tables\T_Log_Log.sql" />
+    <Build Include="dbo\Tables\工作表1_.sql" />
+    <Build Include="dbo\Tables\T_Log_ApiOutputLog.sql" />
+    <Build Include="dbo\Tables\D_JC_Supplier.sql" />
+    <Build Include="dbo\Tables\T_JC_Task.sql" />
+    <Build Include="dbo\Tables\T_JC_TaskUnit.sql" />
+    <Build Include="dbo\Tables\T_Admin_Menu.sql" />
+    <Build Include="dbo\Tables\T_Admin_RolePrivilege.sql" />
+    <Build Include="Security\fesco.sql" />
+    <Build Include="Security\fescohmse.sql" />
+    <Build Include="Security\fescohmse_1.sql" />
+    <Build Include="Security\Fessys.sql" />
+    <Build Include="Security\Fessys_1.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="dbo\Functions\MD5.sql" />
+    <Build Include="dbo\Functions\Encryption.sql" />
+    <Build Include="dbo\Functions\Decrypt.sql" />
+    <Build Include="dbo\Stored Procedures\P_CreateTempAccount.sql" />
+    <Build Include="dbo\Stored Procedures\P_SplitTask.sql" />
+    <Build Include="dbo\Stored Procedures\P_GetJiCaiFuZeRen.sql" />
+    <Build Include="dbo\Stored Procedures\P_DataEncryption.sql" />
+    <Build Include="dbo\Stored Procedures\P_CreateAccountTest.sql" />
+    <Build Include="dbo\Stored Procedures\P_SplitTaskTest.sql" />
+    <Build Include="dbo\Stored Procedures\PROC_CLEAN_DATA.sql" />
+    <Build Include="dbo\Stored Procedures\P_SplitTaskTestTwo.sql" />
+    <Build Include="dbo\Stored Procedures\P_DataListEncryption.sql" />
+    <Build Include="dbo\Stored Procedures\P_CreateUnit.sql" />
+    <Build Include="dbo\Stored Procedures\P_CreateHrAccount.sql" />
+    <Build Include="dbo\Stored Procedures\CreateAdminAccount.sql" />
+    <Build Include="dbo\Stored Procedures\FundBussinessName.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Encryption">
+      <HintPath>Assemblies\Encryption.dll</HintPath>
+      <SqlAssemblyName>Encryption</SqlAssemblyName>
+      <IsModelAware>True</IsModelAware>
+      <GenerateSqlClrDdl>False</GenerateSqlClrDdl>
+      <SqlOwnerName>dbo</SqlOwnerName>
+      <SqlPermissionSet>SAFE</SqlPermissionSet>
+    </Reference>
+  </ItemGroup>
+</Project>

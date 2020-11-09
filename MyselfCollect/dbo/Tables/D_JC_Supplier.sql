@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[D_JC_Supplier] (
+    [SupplierCode]           NVARCHAR (50)  NOT NULL,
+    [SupplierName]           NVARCHAR (255) NULL,
+    [SupplierType]           NVARCHAR (255) NULL,
+    [EngishName]             NVARCHAR (255) NULL,
+    [OfficeType]             NVARCHAR (255) NULL,
+    [Manger]                 NVARCHAR (255) NULL,
+    [OrgCode]                NVARCHAR (50)  NULL,
+    [LegalPerson]            NVARCHAR (255) NULL,
+    [Contry]                 NVARCHAR (255) NULL,
+    [Provice]                NVARCHAR (255) NULL,
+    [City]                   NVARCHAR (255) NULL,
+    [BusinessRegistrationNo] NVARCHAR (50)  NULL,
+    [IsStop]                 NVARCHAR (50)  NULL,
+    [SignDate]               DATETIME       NULL,
+    [PayEndTime]             NVARCHAR (50)  NULL,
+    [AllPayEndTime]          NVARCHAR (50)  NULL,
+    [CreateTime]             DATETIME       NULL,
+    [MaintainDepart]         NVARCHAR (255) NULL,
+    [Id]                     INT            IDENTITY (1, 1) NOT NULL,
+    [UpdateTime]             DATE           CONSTRAINT [DF_D_JC_Supplier_UpdateTime] DEFAULT (getdate()) NOT NULL,
+    [IsDelete]               BIT            CONSTRAINT [DF_D_JC_Supplier_IsDelete] DEFAULT ((0)) NOT NULL,
+    CONSTRAINT [PK_D_JC_Supplier_1] PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+

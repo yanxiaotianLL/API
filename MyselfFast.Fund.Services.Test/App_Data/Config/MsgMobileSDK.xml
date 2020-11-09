@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<QxtConfigration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ServerUrl>http://q.hl95.com:8061/</ServerUrl>
+  <TID>122059</TID>
+  <Account>wqrc</Account>
+  <Password>87140525ec03cfe8a7187a0cf15bf1aa</Password>
+</QxtConfigration>

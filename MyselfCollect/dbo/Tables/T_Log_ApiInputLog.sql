@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[T_Log_ApiInputLog] (
+    [Id]              INT             IDENTITY (1, 1) NOT NULL,
+    [Date]            DATETIME        NOT NULL,
+    [Thread]          VARCHAR (255)   NOT NULL,
+    [Level]           VARCHAR (50)    NOT NULL,
+    [Logger]          VARCHAR (255)   NOT NULL,
+    [Message]         NVARCHAR (4000) CONSTRAINT [DF_ApiInputLog_Message] DEFAULT ('') NULL,
+    [Exception]       NVARCHAR (2000) CONSTRAINT [DF_ApiInputLog_Exception] DEFAULT ('') NULL,
+    [Region]          VARCHAR (50)    CONSTRAINT [DF_ApiInputLog_Region] DEFAULT ('') NULL,
+    [Controller]      VARCHAR (50)    CONSTRAINT [DF_ApiInputLog_Controller] DEFAULT ('') NULL,
+    [Action]          VARCHAR (50)    CONSTRAINT [DF_ApiInputLog_Action] DEFAULT ('') NULL,
+    [AccountType]     VARCHAR (20)    CONSTRAINT [DF_ApiInputLog_AccountType] DEFAULT ('') NULL,
+    [AccountName]     VARCHAR (50)    CONSTRAINT [DF_ApiInputLog_AccountName] DEFAULT ('') NULL,
+    [HttpMethod]      VARCHAR (5)     CONSTRAINT [DF_ApiInputLog_HttpMethod] DEFAULT ('') NULL,
+    [Sign]            VARCHAR (50)    CONSTRAINT [DF_ApiInputLog_Sign] DEFAULT ('') NULL,
+    [OriginalString]  NVARCHAR (500)  CONSTRAINT [DF_ApiInputLog_OriginalString] DEFAULT ('') NULL,
+    [Ip]              VARCHAR (30)    CONSTRAINT [DF_ApiInputLog_Ip] DEFAULT ('') NULL,
+    [RequestTime]     DATETIME        CONSTRAINT [DF__ApiInputL__Reque__023D5A04] DEFAULT (getdate()) NULL,
+    [RequestContent]  NVARCHAR (2000) CONSTRAINT [DF_ApiInputLog_RequestContent] DEFAULT ('') NULL,
+    [ResponseContent] NVARCHAR (2000) CONSTRAINT [DF_ApiInputLog_ResponseContent] DEFAULT ('') NULL,
+    [Expire]          INT             NULL,
+    [CreateTime]      DATE            CONSTRAINT [DF_ApiInputLog_CreateTime] DEFAULT (getdate()) NULL,
+    [UpdateTime]      DATE            CONSTRAINT [DF_ApiInputLog_UpdateTime] DEFAULT (getdate()) NULL,
+    [IsDelete]        BIT             CONSTRAINT [DF_ApiInputLog_IsDelete] DEFAULT ((0)) NULL
+);
+

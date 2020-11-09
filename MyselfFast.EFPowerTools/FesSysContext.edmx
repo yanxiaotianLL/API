@@ -1,0 +1,1676 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Edmx Version="3.0" xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <Runtime>
+    <ConceptualModels>
+      <Schema Namespace="FescoFast.EFPowerTools.Models" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ApiInputLog">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Date" />
+            <PropertyRef Name="Thread" />
+            <PropertyRef Name="Level" />
+            <PropertyRef Name="Logger" />
+            <PropertyRef Name="Message" />
+            <PropertyRef Name="Exception" />
+            <PropertyRef Name="Region" />
+            <PropertyRef Name="Controller" />
+            <PropertyRef Name="Action" />
+            <PropertyRef Name="AccountType" />
+            <PropertyRef Name="AccountName" />
+            <PropertyRef Name="HttpMethod" />
+            <PropertyRef Name="Sign" />
+            <PropertyRef Name="OriginalString" />
+            <PropertyRef Name="Ip" />
+            <PropertyRef Name="RequestTime" />
+            <PropertyRef Name="RequestContent" />
+            <PropertyRef Name="ResponseContent" />
+            <PropertyRef Name="Expire" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="DateTime" Nullable="false" />
+          <Property Name="Thread" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Level" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Logger" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Message" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Exception" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Region" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Controller" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Action" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AccountType" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AccountName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="HttpMethod" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Sign" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="OriginalString" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Ip" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="RequestTime" Type="DateTime" Nullable="false" />
+          <Property Name="RequestContent" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ResponseContent" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Expire" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+        </EntityType>
+        <EntityType Name="ApiOutputLog">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Date" />
+            <PropertyRef Name="Thread" />
+            <PropertyRef Name="Level" />
+            <PropertyRef Name="Logger" />
+            <PropertyRef Name="Message" />
+            <PropertyRef Name="Exception" />
+            <PropertyRef Name="Region" />
+            <PropertyRef Name="Method" />
+            <PropertyRef Name="Module" />
+            <PropertyRef Name="AccountType" />
+            <PropertyRef Name="AccountName" />
+            <PropertyRef Name="HttpMethod" />
+            <PropertyRef Name="RequestUri" />
+            <PropertyRef Name="RequestTime" />
+            <PropertyRef Name="RequestContent" />
+            <PropertyRef Name="ResponseContent" />
+            <PropertyRef Name="Expire" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="DateTime" Nullable="false" />
+          <Property Name="Thread" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Level" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Logger" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Message" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Exception" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Region" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Method" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Module" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AccountType" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AccountName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="HttpMethod" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="RequestUri" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="RequestTime" Type="DateTime" Nullable="false" />
+          <Property Name="RequestContent" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ResponseContent" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Expire" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <Property Name="Sign" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="D_JC_Address">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="area_id" Type="Double" />
+          <Property Name="parent_id" Type="Double" />
+          <Property Name="area_name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="creator_id" Type="Double" />
+          <Property Name="creator_name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="remark" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="area_type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="area_type_dic" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="area_code" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="leaf" Type="Double" />
+          <Property Name="is_parent_menu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="level" Type="Double" />
+          <Property Name="area_state" Type="Double" />
+          <Property Name="area_state_dic" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="area_nature" Type="Double" />
+          <Property Name="area_nature_dic" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="order" Type="Double" />
+          <Property Name="operator" Type="Double" />
+          <Property Name="oper_time" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="Log">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Date" />
+            <PropertyRef Name="Thread" />
+            <PropertyRef Name="Level" />
+            <PropertyRef Name="Logger" />
+            <PropertyRef Name="Message" />
+            <PropertyRef Name="Exception" />
+            <PropertyRef Name="SystemName" />
+            <PropertyRef Name="ModuleName" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Content" />
+            <PropertyRef Name="Code" />
+            <PropertyRef Name="Key1" />
+            <PropertyRef Name="Key2" />
+            <PropertyRef Name="Key3" />
+            <PropertyRef Name="Key4" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="DateTime" Nullable="false" />
+          <Property Name="Thread" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Level" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Logger" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Message" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Exception" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SystemName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ModuleName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Content" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Key1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Key2" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Key3" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Key4" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Admin_Account">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DepartID" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="RealName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Telephone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DepartName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreateTime" Type="DateTime" />
+          <Property Name="UpdateTime" Type="DateTime" />
+          <Property Name="IsDelete" Type="Boolean" />
+          <Property Name="CreateAdmin" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="UpdateAdmin" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="T_Admin_Depart" Relationship="Self.T_Admin_Account_T_Admin_Depart" FromRole="T_Admin_Account_T_Admin_Depart_Source" ToRole="T_Admin_Account_T_Admin_Depart_Target" />
+        </EntityType>
+        <EntityType Name="T_Admin_Depart">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DepartName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DepartDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ParentID" Type="Int32" />
+          <Property Name="CreateTime" Type="DateTime" />
+          <Property Name="UpdateTime" Type="DateTime" />
+          <Property Name="CreateAdmin" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="UpdateAdmin" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="IsDelete" Type="Boolean" />
+          <Property Name="DepartLeader" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LeaderEmail" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="SortValue" Type="Int32" />
+          <Property Name="DepartCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsLeaf" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="T_Admin_Account" Relationship="Self.T_Admin_Account_T_Admin_Depart" FromRole="T_Admin_Account_T_Admin_Depart_Target" ToRole="T_Admin_Account_T_Admin_Depart_Source" />
+        </EntityType>
+        <EntityType Name="T_Admin_AcountRole">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleID" Type="Int32" Nullable="false" />
+          <Property Name="AccountID" Type="Int32" Nullable="false" />
+          <Property Name="IsDelete" Type="Boolean" />
+          <Property Name="CreateTime" Type="DateTime" />
+          <Property Name="CreateAdmin" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SortValue" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="T_Admin_Menu">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MenuName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MenuDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Url" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ParentID" Type="Int32" />
+          <Property Name="SortValue" Type="Int32" />
+          <Property Name="CreateTime" Type="DateTime" />
+          <Property Name="UpdateTime" Type="DateTime" />
+          <Property Name="CreateAdmin" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="UpdateAdmin" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="IsDelete" Type="Boolean" />
+          <Property Name="IsDefault" Type="Int32" />
+          <Property Name="Icon" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="MenuCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IsLeaf" Type="Boolean" Nullable="false" />
+          <Property Name="ControllerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ActionName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="T_Admin_MenuData">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MenuID" Type="Int32" Nullable="false" />
+          <Property Name="DataKey" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DataValue" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IsDefault" Type="Boolean" />
+          <Property Name="IsDelete" Type="Boolean" />
+          <Property Name="CreateTime" Type="DateTime" />
+          <Property Name="UpdateTime" Type="DateTime" />
+          <Property Name="CreateAdmin" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="UpdateAdmin" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Icon" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SortValue" Type="Int32" />
+        </EntityType>
+        <EntityType Name="T_Admin_MenuData_RolePrivilege">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RolePrivilegeID" Type="Int32" Nullable="false" />
+          <Property Name="MenuDataID" Type="Int32" Nullable="false" />
+          <Property Name="IsDelete" Type="Boolean" />
+          <Property Name="CreateTime" Type="DateTime" />
+          <Property Name="CreateAdmin" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="SortValue" Type="Int32" />
+        </EntityType>
+        <EntityType Name="T_Admin_Role">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="RoleDescription" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CreateTime" Type="DateTime" />
+          <Property Name="UpdateTime" Type="DateTime" />
+          <Property Name="CreateAdmin" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="UpdateAdmin" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="IsDelete" Type="Boolean" />
+          <Property Name="SortValue" Type="Int32" />
+        </EntityType>
+        <EntityType Name="T_Admin_RoleData">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DataValue" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DataKey" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IsDelete" Type="Int32" />
+          <Property Name="IsDefault" Type="Int32" />
+          <Property Name="CreateTime" Type="DateTime" />
+          <Property Name="CreateAdmin" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Icon" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SortValue" Type="Int32" />
+        </EntityType>
+        <EntityType Name="T_Admin_RoleData_RolePrivilege">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleID" Type="Int32" />
+          <Property Name="RoleDataID" Type="Int32" />
+          <Property Name="IsDelete" Type="Boolean" />
+          <Property Name="CreateTime" Type="DateTime" />
+          <Property Name="CreateAdmin" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="T_Admin_RolePrivilege">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleID" Type="Int32" Nullable="false" />
+          <Property Name="MenuID" Type="Int32" Nullable="false" />
+          <Property Name="IsDelete" Type="Boolean" />
+          <Property Name="CreateTime" Type="DateTime" />
+          <Property Name="CreateAdmin" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="T_JC_Account">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CON_ACCE_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="BUSI_CUST_NO" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Address_ID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RealName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="13" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="Int32" Nullable="false" />
+          <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" />
+          <Property Name="ActiveTime" Type="DateTime" />
+          <Property Name="UpdateTime" Type="DateTime" />
+          <Property Name="IsEmailVerification" Type="Boolean" />
+          <Property Name="IsPhoneVerification" Type="Boolean" />
+          <Property Name="UNIT_NO" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="CONT_NO" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="T_JC_DataItem">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="order_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UNIQ_NO" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="EMP_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CER_TYPE" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="EMP_ID_CARD" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="EMP_IN_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="COST_CENT_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PER_PKG_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="REG_NO" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="UNIT_REG_NO" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="UNIT_NO" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="UNIT_NAME_PRINT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="INS_DECL_WAGE" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="INS_BASE_WAGE" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ACCU_DECL_WAGE" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ACCU_BASE_WAGE" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="BUSI_CUST_NO" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="BUSI_CUST_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CONT_NO" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="CONT_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ACCE_NO" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ACCE_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="RECE_ORG_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="RECE_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RECE_LOGIN_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="SEND_ORG_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SEND_USER" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="SEND_LOGIN_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SEND_LOGIN_EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SUPP_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SUPP_NO" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="AREA_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="COLLT_TYPE" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="PER_PKG_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BUSI_CUST_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CUST_CON_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CON_ACCE_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="RECE_ORG_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="RECE_USER_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="SEND_ORG_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="SEND_USER_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="JC_Task_ID" Type="Int32" />
+          <Property Name="CreateTime" Type="DateTime" />
+          <Property Name="IsDelete" Type="Boolean" />
+          <Property Name="RECE_SUPPLIERR_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="APEA" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="PRODUCTTYPE" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="PRODUCTID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RECE_SUPPLIER_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SEND_SUPPLIER_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="T_JC_Task" Relationship="Self.T_JC_DataItem_T_JC_Task" FromRole="T_JC_DataItem_T_JC_Task_Source" ToRole="T_JC_DataItem_T_JC_Task_Target" />
+        </EntityType>
+        <EntityType Name="T_JC_Task">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StartTime" Type="DateTime" Nullable="false" />
+          <Property Name="EndTime" Type="DateTime" Nullable="false" />
+          <Property Name="WageAccuracy" Type="Int32" Nullable="false" />
+          <Property Name="CollectlType" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" />
+          <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Address_ID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="OrderID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ShiKaiRate" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="NotShiKaiRate" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CollectProduct" Type="Int32" Nullable="false" />
+          <Property Name="TaskType" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="T_JC_DataItem" Relationship="Self.T_JC_DataItem_T_JC_Task" FromRole="T_JC_DataItem_T_JC_Task_Target" ToRole="T_JC_DataItem_T_JC_Task_Source" />
+          <NavigationProperty Name="T_JC_File" Relationship="Self.T_JC_File_T_JC_Task" FromRole="T_JC_File_T_JC_Task_Target" ToRole="T_JC_File_T_JC_Task_Source" />
+        </EntityType>
+        <EntityType Name="T_JC_File">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FileID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FileName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FileType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TaskId" Type="Int32" />
+          <Property Name="CreateTime" Type="DateTime" />
+          <Property Name="IsDelete" Type="Boolean" />
+          <NavigationProperty Name="T_JC_Task" Relationship="Self.T_JC_File_T_JC_Task" FromRole="T_JC_File_T_JC_Task_Source" ToRole="T_JC_File_T_JC_Task_Target" />
+        </EntityType>
+        <EntityType Name="T_JC_DataItemTemp">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="order_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UNIQ_NO" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="EMP_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CER_TYPE" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="EMP_ID_CARD" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="EMP_IN_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="COST_CENT_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PER_PKG_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="REG_NO" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="UNIT_REG_NO" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="UNIT_NO" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="UNIT_NAME_PRINT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="INS_DECL_WAGE" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="INS_BASE_WAGE" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ACCU_DECL_WAGE" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ACCU_BASE_WAGE" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="BUSI_CUST_NO" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="BUSI_CUST_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CONT_NO" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="CONT_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ACCE_NO" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ACCE_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="RECE_ORG_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="RECE_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RECE_LOGIN_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="SEND_ORG_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SEND_USER" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="SEND_LOGIN_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SEND_LOGIN_EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SUPP_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SUPP_NO" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="AREA_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="COLLT_TYPE" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="PER_PKG_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BUSI_CUST_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CUST_CON_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CON_ACCE_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="RECE_ORG_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="RECE_USER_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="SEND_ORG_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="SEND_USER_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="JC_Task_ID" Type="Int32" />
+          <Property Name="CreateTime" Type="DateTime" />
+          <Property Name="IsDelete" Type="Boolean" />
+          <Property Name="RECE_SUPPLIERR_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="APEA" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="PRODUCTTYPE" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="PRODUCTID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RECE_SUPPLIER_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SEND_SUPPLIER_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="T_JC_TaskUnit">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CON_ACCE_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="BUSI_CUST_NO" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UNIT_NO" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Address_ID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="AccountID" Type="Int32" />
+          <Property Name="AccountName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" />
+          <Property Name="TaskId" Type="Int32" />
+          <Property Name="StartTime" Type="DateTime" />
+          <Property Name="EndTime" Type="DateTime" />
+          <Property Name="State" Type="Int32" />
+          <Property Name="CONT_NO" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ACCE_NO" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="SUPP_NO" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="IsNeedCollectTable" Type="Boolean" />
+          <Property Name="IsNeedAuditing" Type="Boolean" />
+          <Property Name="AuditingState" Type="Int32" />
+          <Property Name="AuditingAccountName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="AuditingAccountID" Type="Int32" />
+          <Property Name="CollectionTableNo" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="CollectlType" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CollectlProduct" Type="Int32" Nullable="false" />
+          <Property Name="ShiKaiRate" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="NotShiKaiRate" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="SheBaoCapValue" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="GongJiJinCapValue" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="T_Admin_Account_T_Admin_Depart">
+          <End Role="T_Admin_Account_T_Admin_Depart_Source" Type="Self.T_Admin_Account" Multiplicity="*" />
+          <End Role="T_Admin_Account_T_Admin_Depart_Target" Type="Self.T_Admin_Depart" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <ReferentialConstraint>
+            <Principal Role="T_Admin_Account_T_Admin_Depart_Target">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="T_Admin_Account_T_Admin_Depart_Source">
+              <PropertyRef Name="DepartID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="T_JC_File_T_JC_Task">
+          <End Role="T_JC_File_T_JC_Task_Source" Type="Self.T_JC_File" Multiplicity="*" />
+          <End Role="T_JC_File_T_JC_Task_Target" Type="Self.T_JC_Task" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="T_JC_File_T_JC_Task_Target">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="T_JC_File_T_JC_Task_Source">
+              <PropertyRef Name="TaskId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="T_JC_DataItem_T_JC_Task">
+          <End Role="T_JC_DataItem_T_JC_Task_Source" Type="Self.T_JC_DataItem" Multiplicity="*" />
+          <End Role="T_JC_DataItem_T_JC_Task_Target" Type="Self.T_JC_Task" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="T_JC_DataItem_T_JC_Task_Target">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="T_JC_DataItem_T_JC_Task_Source">
+              <PropertyRef Name="JC_Task_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="FesSysContext">
+          <EntitySet Name="ApiInputLogs" EntityType="Self.ApiInputLog" />
+          <EntitySet Name="ApiOutputLogs" EntityType="Self.ApiOutputLog" />
+          <EntitySet Name="D_JC_Address" EntityType="Self.D_JC_Address" />
+          <EntitySet Name="Logs" EntityType="Self.Log" />
+          <EntitySet Name="T_Admin_Account" EntityType="Self.T_Admin_Account" />
+          <EntitySet Name="T_Admin_Depart" EntityType="Self.T_Admin_Depart" />
+          <EntitySet Name="T_Admin_AcountRole" EntityType="Self.T_Admin_AcountRole" />
+          <EntitySet Name="T_Admin_Menu" EntityType="Self.T_Admin_Menu" />
+          <EntitySet Name="T_Admin_MenuData" EntityType="Self.T_Admin_MenuData" />
+          <EntitySet Name="T_Admin_MenuData_RolePrivilege" EntityType="Self.T_Admin_MenuData_RolePrivilege" />
+          <EntitySet Name="T_Admin_Role" EntityType="Self.T_Admin_Role" />
+          <EntitySet Name="T_Admin_RoleData" EntityType="Self.T_Admin_RoleData" />
+          <EntitySet Name="T_Admin_RoleData_RolePrivilege" EntityType="Self.T_Admin_RoleData_RolePrivilege" />
+          <EntitySet Name="T_Admin_RolePrivilege" EntityType="Self.T_Admin_RolePrivilege" />
+          <EntitySet Name="T_JC_Account" EntityType="Self.T_JC_Account" />
+          <EntitySet Name="T_JC_DataItem" EntityType="Self.T_JC_DataItem" />
+          <EntitySet Name="T_JC_Task" EntityType="Self.T_JC_Task" />
+          <EntitySet Name="T_JC_File" EntityType="Self.T_JC_File" />
+          <EntitySet Name="T_JC_DataItemTemp" EntityType="Self.T_JC_DataItemTemp" />
+          <EntitySet Name="T_JC_TaskUnit" EntityType="Self.T_JC_TaskUnit" />
+          <AssociationSet Name="T_Admin_Account_T_Admin_Depart" Association="Self.T_Admin_Account_T_Admin_Depart">
+            <End Role="T_Admin_Account_T_Admin_Depart_Source" EntitySet="T_Admin_Account" />
+            <End Role="T_Admin_Account_T_Admin_Depart_Target" EntitySet="T_Admin_Depart" />
+          </AssociationSet>
+          <AssociationSet Name="T_JC_File_T_JC_Task" Association="Self.T_JC_File_T_JC_Task">
+            <End Role="T_JC_File_T_JC_Task_Source" EntitySet="T_JC_File" />
+            <End Role="T_JC_File_T_JC_Task_Target" EntitySet="T_JC_Task" />
+          </AssociationSet>
+          <AssociationSet Name="T_JC_DataItem_T_JC_Task" Association="Self.T_JC_DataItem_T_JC_Task">
+            <End Role="T_JC_DataItem_T_JC_Task_Source" EntitySet="T_JC_DataItem" />
+            <End Role="T_JC_DataItem_T_JC_Task_Target" EntitySet="T_JC_Task" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </ConceptualModels>
+    <Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CodeFirstDatabase" CdmEntityContainer="FesSysContext">
+          <EntitySetMapping Name="ApiInputLogs">
+            <EntityTypeMapping TypeName="FescoFast.EFPowerTools.Models.ApiInputLog">
+              <MappingFragment StoreEntitySet="ApiInputLog">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Thread" ColumnName="Thread" />
+                <ScalarProperty Name="Level" ColumnName="Level" />
+                <ScalarProperty Name="Logger" ColumnName="Logger" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Exception" ColumnName="Exception" />
+                <ScalarProperty Name="Region" ColumnName="Region" />
+                <ScalarProperty Name="Controller" ColumnName="Controller" />
+                <ScalarProperty Name="Action" ColumnName="Action" />
+                <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+                <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+                <ScalarProperty Name="HttpMethod" ColumnName="HttpMethod" />
+                <ScalarProperty Name="Sign" ColumnName="Sign" />
+                <ScalarProperty Name="OriginalString" ColumnName="OriginalString" />
+                <ScalarProperty Name="Ip" ColumnName="Ip" />
+                <ScalarProperty Name="RequestTime" ColumnName="RequestTime" />
+                <ScalarProperty Name="RequestContent" ColumnName="RequestContent" />
+                <ScalarProperty Name="ResponseContent" ColumnName="ResponseContent" />
+                <ScalarProperty Name="Expire" ColumnName="Expire" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ApiOutputLogs">
+            <EntityTypeMapping TypeName="FescoFast.EFPowerTools.Models.ApiOutputLog">
+              <MappingFragment StoreEntitySet="ApiOutputLog">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Thread" ColumnName="Thread" />
+                <ScalarProperty Name="Level" ColumnName="Level" />
+                <ScalarProperty Name="Logger" ColumnName="Logger" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Exception" ColumnName="Exception" />
+                <ScalarProperty Name="Region" ColumnName="Region" />
+                <ScalarProperty Name="Method" ColumnName="Method" />
+                <ScalarProperty Name="Module" ColumnName="Module" />
+                <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+                <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+                <ScalarProperty Name="HttpMethod" ColumnName="HttpMethod" />
+                <ScalarProperty Name="RequestUri" ColumnName="RequestUri" />
+                <ScalarProperty Name="RequestTime" ColumnName="RequestTime" />
+                <ScalarProperty Name="RequestContent" ColumnName="RequestContent" />
+                <ScalarProperty Name="ResponseContent" ColumnName="ResponseContent" />
+                <ScalarProperty Name="Expire" ColumnName="Expire" />
+                <ScalarProperty Name="Sign" ColumnName="Sign" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="D_JC_Address">
+            <EntityTypeMapping TypeName="FescoFast.EFPowerTools.Models.D_JC_Address">
+              <MappingFragment StoreEntitySet="D_JC_Address">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="area_id" ColumnName="area_id" />
+                <ScalarProperty Name="parent_id" ColumnName="parent_id" />
+                <ScalarProperty Name="area_name" ColumnName="area_name" />
+                <ScalarProperty Name="creator_id" ColumnName="creator_id" />
+                <ScalarProperty Name="creator_name" ColumnName="creator_name" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+                <ScalarProperty Name="area_type" ColumnName="area_type" />
+                <ScalarProperty Name="area_type_dic" ColumnName="area_type_dic" />
+                <ScalarProperty Name="area_code" ColumnName="area_code" />
+                <ScalarProperty Name="leaf" ColumnName="leaf" />
+                <ScalarProperty Name="is_parent_menu" ColumnName="is_parent_menu" />
+                <ScalarProperty Name="level" ColumnName="level" />
+                <ScalarProperty Name="area_state" ColumnName="area_state" />
+                <ScalarProperty Name="area_state_dic" ColumnName="area_state_dic" />
+                <ScalarProperty Name="area_nature" ColumnName="area_nature" />
+                <ScalarProperty Name="area_nature_dic" ColumnName="area_nature_dic" />
+                <ScalarProperty Name="order" ColumnName="order" />
+                <ScalarProperty Name="operator" ColumnName="operator" />
+                <ScalarProperty Name="oper_time" ColumnName="oper_time" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Logs">
+            <EntityTypeMapping TypeName="FescoFast.EFPowerTools.Models.Log">
+              <MappingFragment StoreEntitySet="Log">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Thread" ColumnName="Thread" />
+                <ScalarProperty Name="Level" ColumnName="Level" />
+                <ScalarProperty Name="Logger" ColumnName="Logger" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Exception" ColumnName="Exception" />
+                <ScalarProperty Name="SystemName" ColumnName="SystemName" />
+                <ScalarProperty Name="ModuleName" ColumnName="ModuleName" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Key1" ColumnName="Key1" />
+                <ScalarProperty Name="Key2" ColumnName="Key2" />
+                <ScalarProperty Name="Key3" ColumnName="Key3" />
+                <ScalarProperty Name="Key4" ColumnName="Key4" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Admin_Account">
+            <EntityTypeMapping TypeName="FescoFast.EFPowerTools.Models.T_Admin_Account">
+              <MappingFragment StoreEntitySet="T_Admin_Account">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="DepartID" ColumnName="DepartID" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="RealName" ColumnName="RealName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+                <ScalarProperty Name="DepartName" ColumnName="DepartName" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="CreateAdmin" ColumnName="CreateAdmin" />
+                <ScalarProperty Name="UpdateAdmin" ColumnName="UpdateAdmin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Admin_Depart">
+            <EntityTypeMapping TypeName="FescoFast.EFPowerTools.Models.T_Admin_Depart">
+              <MappingFragment StoreEntitySet="T_Admin_Depart">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="DepartName" ColumnName="DepartName" />
+                <ScalarProperty Name="DepartDescription" ColumnName="DepartDescription" />
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="CreateAdmin" ColumnName="CreateAdmin" />
+                <ScalarProperty Name="UpdateAdmin" ColumnName="UpdateAdmin" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="DepartLeader" ColumnName="DepartLeader" />
+                <ScalarProperty Name="LeaderEmail" ColumnName="LeaderEmail" />
+                <ScalarProperty Name="SortValue" ColumnName="SortValue" />
+                <ScalarProperty Name="DepartCode" ColumnName="DepartCode" />
+                <ScalarProperty Name="IsLeaf" ColumnName="IsLeaf" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Admin_AcountRole">
+            <EntityTypeMapping TypeName="FescoFast.EFPowerTools.Models.T_Admin_AcountRole">
+              <MappingFragment StoreEntitySet="T_Admin_AcountRole">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateAdmin" ColumnName="CreateAdmin" />
+                <ScalarProperty Name="SortValue" ColumnName="SortValue" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Admin_Menu">
+            <EntityTypeMapping TypeName="FescoFast.EFPowerTools.Models.T_Admin_Menu">
+              <MappingFragment StoreEntitySet="T_Admin_Menu">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="MenuName" ColumnName="MenuName" />
+                <ScalarProperty Name="MenuDescription" ColumnName="MenuDescription" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+                <ScalarProperty Name="SortValue" ColumnName="SortValue" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="CreateAdmin" ColumnName="CreateAdmin" />
+                <ScalarProperty Name="UpdateAdmin" ColumnName="UpdateAdmin" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="IsDefault" ColumnName="IsDefault" />
+                <ScalarProperty Name="Icon" ColumnName="Icon" />
+                <ScalarProperty Name="MenuCode" ColumnName="MenuCode" />
+                <ScalarProperty Name="IsLeaf" ColumnName="IsLeaf" />
+                <ScalarProperty Name="ControllerName" ColumnName="ControllerName" />
+                <ScalarProperty Name="ActionName" ColumnName="ActionName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Admin_MenuData">
+            <EntityTypeMapping TypeName="FescoFast.EFPowerTools.Models.T_Admin_MenuData">
+              <MappingFragment StoreEntitySet="T_Admin_MenuData">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+                <ScalarProperty Name="DataKey" ColumnName="DataKey" />
+                <ScalarProperty Name="DataValue" ColumnName="DataValue" />
+                <ScalarProperty Name="IsDefault" ColumnName="IsDefault" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="CreateAdmin" ColumnName="CreateAdmin" />
+                <ScalarProperty Name="UpdateAdmin" ColumnName="UpdateAdmin" />
+                <ScalarProperty Name="Icon" ColumnName="Icon" />
+                <ScalarProperty Name="SortValue" ColumnName="SortValue" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Admin_MenuData_RolePrivilege">
+            <EntityTypeMapping TypeName="FescoFast.EFPowerTools.Models.T_Admin_MenuData_RolePrivilege">
+              <MappingFragment StoreEntitySet="T_Admin_MenuData_RolePrivilege">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RolePrivilegeID" ColumnName="RolePrivilegeID" />
+                <ScalarProperty Name="MenuDataID" ColumnName="MenuDataID" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateAdmin" ColumnName="CreateAdmin" />
+                <ScalarProperty Name="SortValue" ColumnName="SortValue" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Admin_Role">
+            <EntityTypeMapping TypeName="FescoFast.EFPowerTools.Models.T_Admin_Role">
+              <MappingFragment StoreEntitySet="T_Admin_Role">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="RoleDescription" ColumnName="RoleDescription" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="CreateAdmin" ColumnName="CreateAdmin" />
+                <ScalarProperty Name="UpdateAdmin" ColumnName="UpdateAdmin" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="SortValue" ColumnName="SortValue" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Admin_RoleData">
+            <EntityTypeMapping TypeName="FescoFast.EFPowerTools.Models.T_Admin_RoleData">
+              <MappingFragment StoreEntitySet="T_Admin_RoleData">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="DataValue" ColumnName="DataValue" />
+                <ScalarProperty Name="DataKey" ColumnName="DataKey" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="IsDefault" ColumnName="IsDefault" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateAdmin" ColumnName="CreateAdmin" />
+                <ScalarProperty Name="Icon" ColumnName="Icon" />
+                <ScalarProperty Name="SortValue" ColumnName="SortValue" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Admin_RoleData_RolePrivilege">
+            <EntityTypeMapping TypeName="FescoFast.EFPowerTools.Models.T_Admin_RoleData_RolePrivilege">
+              <MappingFragment StoreEntitySet="T_Admin_RoleData_RolePrivilege">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="RoleDataID" ColumnName="RoleDataID" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateAdmin" ColumnName="CreateAdmin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Admin_RolePrivilege">
+            <EntityTypeMapping TypeName="FescoFast.EFPowerTools.Models.T_Admin_RolePrivilege">
+              <MappingFragment StoreEntitySet="T_Admin_RolePrivilege">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateAdmin" ColumnName="CreateAdmin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_JC_Account">
+            <EntityTypeMapping TypeName="FescoFast.EFPowerTools.Models.T_JC_Account">
+              <MappingFragment StoreEntitySet="T_JC_Account">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CON_ACCE_ID" ColumnName="CON_ACCE_ID" />
+                <ScalarProperty Name="BUSI_CUST_NO" ColumnName="BUSI_CUST_NO" />
+                <ScalarProperty Name="Address_ID" ColumnName="Address_ID" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="RealName" ColumnName="RealName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="ActiveTime" ColumnName="ActiveTime" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="IsEmailVerification" ColumnName="IsEmailVerification" />
+                <ScalarProperty Name="IsPhoneVerification" ColumnName="IsPhoneVerification" />
+                <ScalarProperty Name="UNIT_NO" ColumnName="UNIT_NO" />
+                <ScalarProperty Name="CONT_NO" ColumnName="CONT_NO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_JC_DataItem">
+            <EntityTypeMapping TypeName="FescoFast.EFPowerTools.Models.T_JC_DataItem">
+              <MappingFragment StoreEntitySet="T_JC_DataItem">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="order_id" ColumnName="order_id" />
+                <ScalarProperty Name="UNIQ_NO" ColumnName="UNIQ_NO" />
+                <ScalarProperty Name="EMP_NAME" ColumnName="EMP_NAME" />
+                <ScalarProperty Name="CER_TYPE" ColumnName="CER_TYPE" />
+                <ScalarProperty Name="EMP_ID_CARD" ColumnName="EMP_ID_CARD" />
+                <ScalarProperty Name="EMP_IN_CODE" ColumnName="EMP_IN_CODE" />
+                <ScalarProperty Name="COST_CENT_NO" ColumnName="COST_CENT_NO" />
+                <ScalarProperty Name="PER_PKG_NAME" ColumnName="PER_PKG_NAME" />
+                <ScalarProperty Name="REG_NO" ColumnName="REG_NO" />
+                <ScalarProperty Name="UNIT_REG_NO" ColumnName="UNIT_REG_NO" />
+                <ScalarProperty Name="UNIT_NO" ColumnName="UNIT_NO" />
+                <ScalarProperty Name="UNIT_NAME_PRINT" ColumnName="UNIT_NAME_PRINT" />
+                <ScalarProperty Name="INS_DECL_WAGE" ColumnName="INS_DECL_WAGE" />
+                <ScalarProperty Name="INS_BASE_WAGE" ColumnName="INS_BASE_WAGE" />
+                <ScalarProperty Name="ACCU_DECL_WAGE" ColumnName="ACCU_DECL_WAGE" />
+                <ScalarProperty Name="ACCU_BASE_WAGE" ColumnName="ACCU_BASE_WAGE" />
+                <ScalarProperty Name="BUSI_CUST_NO" ColumnName="BUSI_CUST_NO" />
+                <ScalarProperty Name="BUSI_CUST_NAME" ColumnName="BUSI_CUST_NAME" />
+                <ScalarProperty Name="CONT_NO" ColumnName="CONT_NO" />
+                <ScalarProperty Name="CONT_NAME" ColumnName="CONT_NAME" />
+                <ScalarProperty Name="ACCE_NO" ColumnName="ACCE_NO" />
+                <ScalarProperty Name="ACCE_NAME" ColumnName="ACCE_NAME" />
+                <ScalarProperty Name="RECE_ORG_NAME" ColumnName="RECE_ORG_NAME" />
+                <ScalarProperty Name="RECE_USER" ColumnName="RECE_USER" />
+                <ScalarProperty Name="RECE_LOGIN_NAME" ColumnName="RECE_LOGIN_NAME" />
+                <ScalarProperty Name="SEND_ORG_NAME" ColumnName="SEND_ORG_NAME" />
+                <ScalarProperty Name="SEND_USER" ColumnName="SEND_USER" />
+                <ScalarProperty Name="SEND_LOGIN_NAME" ColumnName="SEND_LOGIN_NAME" />
+                <ScalarProperty Name="SEND_LOGIN_EMAIL" ColumnName="SEND_LOGIN_EMAIL" />
+                <ScalarProperty Name="SUPP_NAME" ColumnName="SUPP_NAME" />
+                <ScalarProperty Name="SUPP_NO" ColumnName="SUPP_NO" />
+                <ScalarProperty Name="AREA_ID" ColumnName="AREA_ID" />
+                <ScalarProperty Name="COLLT_TYPE" ColumnName="COLLT_TYPE" />
+                <ScalarProperty Name="PER_PKG_ID" ColumnName="PER_PKG_ID" />
+                <ScalarProperty Name="BUSI_CUST_ID" ColumnName="BUSI_CUST_ID" />
+                <ScalarProperty Name="CUST_CON_ID" ColumnName="CUST_CON_ID" />
+                <ScalarProperty Name="CON_ACCE_ID" ColumnName="CON_ACCE_ID" />
+                <ScalarProperty Name="RECE_ORG_ID" ColumnName="RECE_ORG_ID" />
+                <ScalarProperty Name="RECE_USER_ID" ColumnName="RECE_USER_ID" />
+                <ScalarProperty Name="SEND_ORG_ID" ColumnName="SEND_ORG_ID" />
+                <ScalarProperty Name="SEND_USER_ID" ColumnName="SEND_USER_ID" />
+                <ScalarProperty Name="JC_Task_ID" ColumnName="JC_Task_ID" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="RECE_SUPPLIERR_NAME" ColumnName="RECE_SUPPLIERR_NAME" />
+                <ScalarProperty Name="APEA" ColumnName="APEA" />
+                <ScalarProperty Name="PRODUCTTYPE" ColumnName="PRODUCTTYPE" />
+                <ScalarProperty Name="PRODUCTID" ColumnName="PRODUCTID" />
+                <ScalarProperty Name="RECE_SUPPLIER_ID" ColumnName="RECE_SUPPLIER_ID" />
+                <ScalarProperty Name="SEND_SUPPLIER_ID" ColumnName="SEND_SUPPLIER_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_JC_Task">
+            <EntityTypeMapping TypeName="FescoFast.EFPowerTools.Models.T_JC_Task">
+              <MappingFragment StoreEntitySet="T_JC_Task">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="WageAccuracy" ColumnName="WageAccuracy" />
+                <ScalarProperty Name="CollectlType" ColumnName="CollectlType" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Address_ID" ColumnName="Address_ID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+                <ScalarProperty Name="ShiKaiRate" ColumnName="ShiKaiRate" />
+                <ScalarProperty Name="NotShiKaiRate" ColumnName="NotShiKaiRate" />
+                <ScalarProperty Name="CollectProduct" ColumnName="CollectProduct" />
+                <ScalarProperty Name="TaskType" ColumnName="TaskType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_JC_File">
+            <EntityTypeMapping TypeName="FescoFast.EFPowerTools.Models.T_JC_File">
+              <MappingFragment StoreEntitySet="T_JC_File">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FileID" ColumnName="FileID" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="FileType" ColumnName="FileType" />
+                <ScalarProperty Name="TaskId" ColumnName="TaskId" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_JC_DataItemTemp">
+            <EntityTypeMapping TypeName="FescoFast.EFPowerTools.Models.T_JC_DataItemTemp">
+              <MappingFragment StoreEntitySet="T_JC_DataItemTemp">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="order_id" ColumnName="order_id" />
+                <ScalarProperty Name="UNIQ_NO" ColumnName="UNIQ_NO" />
+                <ScalarProperty Name="EMP_NAME" ColumnName="EMP_NAME" />
+                <ScalarProperty Name="CER_TYPE" ColumnName="CER_TYPE" />
+                <ScalarProperty Name="EMP_ID_CARD" ColumnName="EMP_ID_CARD" />
+                <ScalarProperty Name="EMP_IN_CODE" ColumnName="EMP_IN_CODE" />
+                <ScalarProperty Name="COST_CENT_NO" ColumnName="COST_CENT_NO" />
+                <ScalarProperty Name="PER_PKG_NAME" ColumnName="PER_PKG_NAME" />
+                <ScalarProperty Name="REG_NO" ColumnName="REG_NO" />
+                <ScalarProperty Name="UNIT_REG_NO" ColumnName="UNIT_REG_NO" />
+                <ScalarProperty Name="UNIT_NO" ColumnName="UNIT_NO" />
+                <ScalarProperty Name="UNIT_NAME_PRINT" ColumnName="UNIT_NAME_PRINT" />
+                <ScalarProperty Name="INS_DECL_WAGE" ColumnName="INS_DECL_WAGE" />
+                <ScalarProperty Name="INS_BASE_WAGE" ColumnName="INS_BASE_WAGE" />
+                <ScalarProperty Name="ACCU_DECL_WAGE" ColumnName="ACCU_DECL_WAGE" />
+                <ScalarProperty Name="ACCU_BASE_WAGE" ColumnName="ACCU_BASE_WAGE" />
+                <ScalarProperty Name="BUSI_CUST_NO" ColumnName="BUSI_CUST_NO" />
+                <ScalarProperty Name="BUSI_CUST_NAME" ColumnName="BUSI_CUST_NAME" />
+                <ScalarProperty Name="CONT_NO" ColumnName="CONT_NO" />
+                <ScalarProperty Name="CONT_NAME" ColumnName="CONT_NAME" />
+                <ScalarProperty Name="ACCE_NO" ColumnName="ACCE_NO" />
+                <ScalarProperty Name="ACCE_NAME" ColumnName="ACCE_NAME" />
+                <ScalarProperty Name="RECE_ORG_NAME" ColumnName="RECE_ORG_NAME" />
+                <ScalarProperty Name="RECE_USER" ColumnName="RECE_USER" />
+                <ScalarProperty Name="RECE_LOGIN_NAME" ColumnName="RECE_LOGIN_NAME" />
+                <ScalarProperty Name="SEND_ORG_NAME" ColumnName="SEND_ORG_NAME" />
+                <ScalarProperty Name="SEND_USER" ColumnName="SEND_USER" />
+                <ScalarProperty Name="SEND_LOGIN_NAME" ColumnName="SEND_LOGIN_NAME" />
+                <ScalarProperty Name="SEND_LOGIN_EMAIL" ColumnName="SEND_LOGIN_EMAIL" />
+                <ScalarProperty Name="SUPP_NAME" ColumnName="SUPP_NAME" />
+                <ScalarProperty Name="SUPP_NO" ColumnName="SUPP_NO" />
+                <ScalarProperty Name="AREA_ID" ColumnName="AREA_ID" />
+                <ScalarProperty Name="COLLT_TYPE" ColumnName="COLLT_TYPE" />
+                <ScalarProperty Name="PER_PKG_ID" ColumnName="PER_PKG_ID" />
+                <ScalarProperty Name="BUSI_CUST_ID" ColumnName="BUSI_CUST_ID" />
+                <ScalarProperty Name="CUST_CON_ID" ColumnName="CUST_CON_ID" />
+                <ScalarProperty Name="CON_ACCE_ID" ColumnName="CON_ACCE_ID" />
+                <ScalarProperty Name="RECE_ORG_ID" ColumnName="RECE_ORG_ID" />
+                <ScalarProperty Name="RECE_USER_ID" ColumnName="RECE_USER_ID" />
+                <ScalarProperty Name="SEND_ORG_ID" ColumnName="SEND_ORG_ID" />
+                <ScalarProperty Name="SEND_USER_ID" ColumnName="SEND_USER_ID" />
+                <ScalarProperty Name="JC_Task_ID" ColumnName="JC_Task_ID" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="RECE_SUPPLIERR_NAME" ColumnName="RECE_SUPPLIERR_NAME" />
+                <ScalarProperty Name="APEA" ColumnName="APEA" />
+                <ScalarProperty Name="PRODUCTTYPE" ColumnName="PRODUCTTYPE" />
+                <ScalarProperty Name="PRODUCTID" ColumnName="PRODUCTID" />
+                <ScalarProperty Name="RECE_SUPPLIER_ID" ColumnName="RECE_SUPPLIER_ID" />
+                <ScalarProperty Name="SEND_SUPPLIER_ID" ColumnName="SEND_SUPPLIER_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_JC_TaskUnit">
+            <EntityTypeMapping TypeName="FescoFast.EFPowerTools.Models.T_JC_TaskUnit">
+              <MappingFragment StoreEntitySet="T_JC_TaskUnit">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CON_ACCE_ID" ColumnName="CON_ACCE_ID" />
+                <ScalarProperty Name="BUSI_CUST_NO" ColumnName="BUSI_CUST_NO" />
+                <ScalarProperty Name="UNIT_NO" ColumnName="UNIT_NO" />
+                <ScalarProperty Name="Address_ID" ColumnName="Address_ID" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+                <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="TaskId" ColumnName="TaskId" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="CONT_NO" ColumnName="CONT_NO" />
+                <ScalarProperty Name="ACCE_NO" ColumnName="ACCE_NO" />
+                <ScalarProperty Name="SUPP_NO" ColumnName="SUPP_NO" />
+                <ScalarProperty Name="IsNeedCollectTable" ColumnName="IsNeedCollectTable" />
+                <ScalarProperty Name="IsNeedAuditing" ColumnName="IsNeedAuditing" />
+                <ScalarProperty Name="AuditingState" ColumnName="AuditingState" />
+                <ScalarProperty Name="AuditingAccountName" ColumnName="AuditingAccountName" />
+                <ScalarProperty Name="AuditingAccountID" ColumnName="AuditingAccountID" />
+                <ScalarProperty Name="CollectionTableNo" ColumnName="CollectionTableNo" />
+                <ScalarProperty Name="CollectlType" ColumnName="CollectlType" />
+                <ScalarProperty Name="CollectlProduct" ColumnName="CollectlProduct" />
+                <ScalarProperty Name="ShiKaiRate" ColumnName="ShiKaiRate" />
+                <ScalarProperty Name="NotShiKaiRate" ColumnName="NotShiKaiRate" />
+                <ScalarProperty Name="SheBaoCapValue" ColumnName="SheBaoCapValue" />
+                <ScalarProperty Name="GongJiJinCapValue" ColumnName="GongJiJinCapValue" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </Mappings>
+    <StorageModels>
+      <Schema Namespace="CodeFirstDatabaseSchema" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ApiInputLog">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Date" />
+            <PropertyRef Name="Thread" />
+            <PropertyRef Name="Level" />
+            <PropertyRef Name="Logger" />
+            <PropertyRef Name="Message" />
+            <PropertyRef Name="Exception" />
+            <PropertyRef Name="Region" />
+            <PropertyRef Name="Controller" />
+            <PropertyRef Name="Action" />
+            <PropertyRef Name="AccountType" />
+            <PropertyRef Name="AccountName" />
+            <PropertyRef Name="HttpMethod" />
+            <PropertyRef Name="Sign" />
+            <PropertyRef Name="OriginalString" />
+            <PropertyRef Name="Ip" />
+            <PropertyRef Name="RequestTime" />
+            <PropertyRef Name="RequestContent" />
+            <PropertyRef Name="ResponseContent" />
+            <PropertyRef Name="Expire" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="Thread" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Level" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Logger" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Message" Type="nvarchar" MaxLength="4000" Nullable="false" />
+          <Property Name="Exception" Type="nvarchar" MaxLength="2000" Nullable="false" />
+          <Property Name="Region" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Controller" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Action" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="AccountType" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="AccountName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="HttpMethod" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="Sign" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="OriginalString" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="Ip" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="RequestTime" Type="datetime" Nullable="false" />
+          <Property Name="RequestContent" Type="nvarchar" MaxLength="2000" Nullable="false" />
+          <Property Name="ResponseContent" Type="nvarchar" MaxLength="2000" Nullable="false" />
+          <Property Name="Expire" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ApiOutputLog">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Date" />
+            <PropertyRef Name="Thread" />
+            <PropertyRef Name="Level" />
+            <PropertyRef Name="Logger" />
+            <PropertyRef Name="Message" />
+            <PropertyRef Name="Exception" />
+            <PropertyRef Name="Region" />
+            <PropertyRef Name="Method" />
+            <PropertyRef Name="Module" />
+            <PropertyRef Name="AccountType" />
+            <PropertyRef Name="AccountName" />
+            <PropertyRef Name="HttpMethod" />
+            <PropertyRef Name="RequestUri" />
+            <PropertyRef Name="RequestTime" />
+            <PropertyRef Name="RequestContent" />
+            <PropertyRef Name="ResponseContent" />
+            <PropertyRef Name="Expire" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="Thread" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Level" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Logger" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Message" Type="nvarchar" MaxLength="4000" Nullable="false" />
+          <Property Name="Exception" Type="nvarchar" MaxLength="2000" Nullable="false" />
+          <Property Name="Region" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Method" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Module" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="AccountType" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="AccountName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="HttpMethod" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="RequestUri" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="RequestTime" Type="datetime" Nullable="false" />
+          <Property Name="RequestContent" Type="nvarchar" MaxLength="2000" Nullable="false" />
+          <Property Name="ResponseContent" Type="nvarchar" MaxLength="2000" Nullable="false" />
+          <Property Name="Expire" Type="int" Nullable="false" />
+          <Property Name="Sign" Type="nvarchar" MaxLength="50" Nullable="true" />
+        </EntityType>
+        <EntityType Name="D_JC_Address">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="area_id" Type="float" Nullable="true" />
+          <Property Name="parent_id" Type="float" Nullable="true" />
+          <Property Name="area_name" Type="nvarchar" MaxLength="255" Nullable="true" />
+          <Property Name="creator_id" Type="float" Nullable="true" />
+          <Property Name="creator_name" Type="nvarchar" MaxLength="255" Nullable="true" />
+          <Property Name="remark" Type="nvarchar" MaxLength="255" Nullable="true" />
+          <Property Name="area_type" Type="nvarchar" MaxLength="255" Nullable="true" />
+          <Property Name="area_type_dic" Type="nvarchar" MaxLength="255" Nullable="true" />
+          <Property Name="area_code" Type="nvarchar" MaxLength="255" Nullable="true" />
+          <Property Name="leaf" Type="float" Nullable="true" />
+          <Property Name="is_parent_menu" Type="nvarchar" MaxLength="255" Nullable="true" />
+          <Property Name="level" Type="float" Nullable="true" />
+          <Property Name="area_state" Type="float" Nullable="true" />
+          <Property Name="area_state_dic" Type="nvarchar" MaxLength="255" Nullable="true" />
+          <Property Name="area_nature" Type="float" Nullable="true" />
+          <Property Name="area_nature_dic" Type="nvarchar" MaxLength="255" Nullable="true" />
+          <Property Name="order" Type="float" Nullable="true" />
+          <Property Name="operator" Type="float" Nullable="true" />
+          <Property Name="oper_time" Type="datetime" Nullable="true" />
+        </EntityType>
+        <EntityType Name="Log">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Date" />
+            <PropertyRef Name="Thread" />
+            <PropertyRef Name="Level" />
+            <PropertyRef Name="Logger" />
+            <PropertyRef Name="Message" />
+            <PropertyRef Name="Exception" />
+            <PropertyRef Name="SystemName" />
+            <PropertyRef Name="ModuleName" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Content" />
+            <PropertyRef Name="Code" />
+            <PropertyRef Name="Key1" />
+            <PropertyRef Name="Key2" />
+            <PropertyRef Name="Key3" />
+            <PropertyRef Name="Key4" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="Thread" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Level" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Logger" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Message" Type="nvarchar" MaxLength="4000" Nullable="false" />
+          <Property Name="Exception" Type="nvarchar" MaxLength="2000" Nullable="false" />
+          <Property Name="SystemName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="ModuleName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Content" Type="nvarchar" MaxLength="4000" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Key1" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Key2" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Key3" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Key4" Type="nvarchar" MaxLength="200" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Admin_Account">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DepartID" Type="int" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="RealName" Type="nvarchar" MaxLength="10" Nullable="true" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="Telephone" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="DepartName" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="CreateTime" Type="datetime" Nullable="true" />
+          <Property Name="UpdateTime" Type="datetime" Nullable="true" />
+          <Property Name="IsDelete" Type="bit" Nullable="true" />
+          <Property Name="CreateAdmin" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="UpdateAdmin" Type="nvarchar" MaxLength="20" Nullable="true" />
+        </EntityType>
+        <EntityType Name="T_Admin_Depart">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DepartName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DepartDescription" Type="nvarchar" MaxLength="500" Nullable="true" />
+          <Property Name="ParentID" Type="int" Nullable="true" />
+          <Property Name="CreateTime" Type="datetime" Nullable="true" />
+          <Property Name="UpdateTime" Type="datetime" Nullable="true" />
+          <Property Name="CreateAdmin" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="UpdateAdmin" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="IsDelete" Type="bit" Nullable="true" />
+          <Property Name="DepartLeader" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="LeaderEmail" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="SortValue" Type="int" Nullable="true" />
+          <Property Name="DepartCode" Type="nvarchar(max)" Nullable="true" />
+          <Property Name="IsLeaf" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Admin_AcountRole">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RoleID" Type="int" Nullable="false" />
+          <Property Name="AccountID" Type="int" Nullable="false" />
+          <Property Name="IsDelete" Type="bit" Nullable="true" />
+          <Property Name="CreateTime" Type="datetime" Nullable="true" />
+          <Property Name="CreateAdmin" Type="nvarchar(max)" Nullable="true" />
+          <Property Name="SortValue" Type="nchar" MaxLength="10" Nullable="true" />
+        </EntityType>
+        <EntityType Name="T_Admin_Menu">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MenuName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="MenuDescription" Type="nvarchar" MaxLength="500" Nullable="true" />
+          <Property Name="Url" Type="nvarchar" MaxLength="100" Nullable="true" />
+          <Property Name="ParentID" Type="int" Nullable="true" />
+          <Property Name="SortValue" Type="int" Nullable="true" />
+          <Property Name="CreateTime" Type="datetime" Nullable="true" />
+          <Property Name="UpdateTime" Type="datetime" Nullable="true" />
+          <Property Name="CreateAdmin" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="UpdateAdmin" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="IsDelete" Type="bit" Nullable="true" />
+          <Property Name="IsDefault" Type="int" Nullable="true" />
+          <Property Name="Icon" Type="nvarchar" MaxLength="100" Nullable="true" />
+          <Property Name="MenuCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IsLeaf" Type="bit" Nullable="false" />
+          <Property Name="ControllerName" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="ActionName" Type="nvarchar" MaxLength="50" Nullable="true" />
+        </EntityType>
+        <EntityType Name="T_Admin_MenuData">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MenuID" Type="int" Nullable="false" />
+          <Property Name="DataKey" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DataValue" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IsDefault" Type="bit" Nullable="true" />
+          <Property Name="IsDelete" Type="bit" Nullable="true" />
+          <Property Name="CreateTime" Type="datetime" Nullable="true" />
+          <Property Name="UpdateTime" Type="datetime" Nullable="true" />
+          <Property Name="CreateAdmin" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="UpdateAdmin" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="Icon" Type="nvarchar" MaxLength="100" Nullable="true" />
+          <Property Name="SortValue" Type="int" Nullable="true" />
+        </EntityType>
+        <EntityType Name="T_Admin_MenuData_RolePrivilege">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RolePrivilegeID" Type="int" Nullable="false" />
+          <Property Name="MenuDataID" Type="int" Nullable="false" />
+          <Property Name="IsDelete" Type="bit" Nullable="true" />
+          <Property Name="CreateTime" Type="datetime" Nullable="true" />
+          <Property Name="CreateAdmin" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="SortValue" Type="int" Nullable="true" />
+        </EntityType>
+        <EntityType Name="T_Admin_Role">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RoleName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="RoleDescription" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="CreateTime" Type="datetime" Nullable="true" />
+          <Property Name="UpdateTime" Type="datetime" Nullable="true" />
+          <Property Name="CreateAdmin" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="UpdateAdmin" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="IsDelete" Type="bit" Nullable="true" />
+          <Property Name="SortValue" Type="int" Nullable="true" />
+        </EntityType>
+        <EntityType Name="T_Admin_RoleData">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DataValue" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DataKey" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IsDelete" Type="int" Nullable="true" />
+          <Property Name="IsDefault" Type="int" Nullable="true" />
+          <Property Name="CreateTime" Type="datetime" Nullable="true" />
+          <Property Name="CreateAdmin" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="Icon" Type="nvarchar" MaxLength="200" Nullable="true" />
+          <Property Name="SortValue" Type="int" Nullable="true" />
+        </EntityType>
+        <EntityType Name="T_Admin_RoleData_RolePrivilege">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RoleID" Type="int" Nullable="true" />
+          <Property Name="RoleDataID" Type="int" Nullable="true" />
+          <Property Name="IsDelete" Type="bit" Nullable="true" />
+          <Property Name="CreateTime" Type="datetime" Nullable="true" />
+          <Property Name="CreateAdmin" Type="nvarchar" MaxLength="20" Nullable="true" />
+        </EntityType>
+        <EntityType Name="T_Admin_RolePrivilege">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RoleID" Type="int" Nullable="false" />
+          <Property Name="MenuID" Type="int" Nullable="false" />
+          <Property Name="IsDelete" Type="bit" Nullable="true" />
+          <Property Name="CreateTime" Type="datetime" Nullable="true" />
+          <Property Name="CreateAdmin" Type="nvarchar(max)" Nullable="true" />
+        </EntityType>
+        <EntityType Name="T_JC_Account">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CON_ACCE_ID" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="BUSI_CUST_NO" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Address_ID" Type="nvarchar" MaxLength="30" Nullable="true" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="RealName" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="Email" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="13" Nullable="true" />
+          <Property Name="State" Type="int" Nullable="false" />
+          <Property Name="IsDelete" Type="bit" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="ActiveTime" Type="datetime" Nullable="true" />
+          <Property Name="UpdateTime" Type="datetime" Nullable="true" />
+          <Property Name="IsEmailVerification" Type="bit" Nullable="true" />
+          <Property Name="IsPhoneVerification" Type="bit" Nullable="true" />
+          <Property Name="UNIT_NO" Type="nvarchar" MaxLength="30" Nullable="true" />
+          <Property Name="CONT_NO" Type="nvarchar" MaxLength="30" Nullable="true" />
+        </EntityType>
+        <EntityType Name="T_JC_DataItem">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="order_id" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="UNIQ_NO" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="EMP_NAME" Type="nvarchar" MaxLength="200" Nullable="true" />
+          <Property Name="CER_TYPE" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="EMP_ID_CARD" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="EMP_IN_CODE" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="COST_CENT_NO" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="PER_PKG_NAME" Type="nvarchar" MaxLength="200" Nullable="true" />
+          <Property Name="REG_NO" Type="nvarchar" MaxLength="30" Nullable="true" />
+          <Property Name="UNIT_REG_NO" Type="nvarchar" MaxLength="30" Nullable="true" />
+          <Property Name="UNIT_NO" Type="nvarchar" MaxLength="30" Nullable="true" />
+          <Property Name="UNIT_NAME_PRINT" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="INS_DECL_WAGE" Type="nvarchar" MaxLength="30" Nullable="true" />
+          <Property Name="INS_BASE_WAGE" Type="nvarchar" MaxLength="30" Nullable="true" />
+          <Property Name="ACCU_DECL_WAGE" Type="nvarchar" MaxLength="30" Nullable="true" />
+          <Property Name="ACCU_BASE_WAGE" Type="nvarchar" MaxLength="30" Nullable="true" />
+          <Property Name="BUSI_CUST_NO" Type="nvarchar" MaxLength="30" Nullable="true" />
+          <Property Name="BUSI_CUST_NAME" Type="nvarchar" MaxLength="200" Nullable="true" />
+          <Property Name="CONT_NO" Type="nvarchar" MaxLength="30" Nullable="true" />
+          <Property Name="CONT_NAME" Type="nvarchar" MaxLength="200" Nullable="true" />
+          <Property Name="ACCE_NO" Type="nvarchar" MaxLength="30" Nullable="true" />
+          <Property Name="ACCE_NAME" Type="nvarchar" MaxLength="200" Nullable="true" />
+          <Property Name="RECE_ORG_NAME" Type="nvarchar" MaxLength="200" Nullable="true" />
+          <Property Name="RECE_USER" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="RECE_LOGIN_NAME" Type="nvarchar" MaxLength="30" Nullable="true" />
+          <Property Name="SEND_ORG_NAME" Type="nvarchar" MaxLength="200" Nullable="true" />
+          <Property Name="SEND_USER" Type="nvarchar" MaxLength="30" Nullable="true" />
+          <Property Name="SEND_LOGIN_NAME" Type="nvarchar" MaxLength="200" Nullable="true" />
+          <Property Name="SEND_LOGIN_EMAIL" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="SUPP_NAME" Type="nvarchar" MaxLength="200" Nullable="true" />
+          <Property Name="SUPP_NO" Type="nvarchar" MaxLength="30" Nullable="true" />
+          <Property Name="AREA_ID" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="COLLT_TYPE" Type="nvarchar" MaxLength="30" Nullable="true" />
+          <Property Name="PER_PKG_ID" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="BUSI_CUST_ID" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="CUST_CON_ID" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="CON_ACCE_ID" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="RECE_ORG_ID" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="RECE_USER_ID" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="SEND_ORG_ID" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="SEND_USER_ID" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="JC_Task_ID" Type="int" Nullable="true" />
+          <Property Name="CreateTime" Type="datetime" Nullable="true" />
+          <Property Name="IsDelete" Type="bit" Nullable="true" />
+          <Property Name="RECE_SUPPLIERR_NAME" Type="nvarchar" MaxLength="200" Nullable="true" />
+          <Property Name="APEA" Type="nvarchar" MaxLength="200" Nullable="true" />
+          <Property Name="PRODUCTTYPE" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="PRODUCTID" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="RECE_SUPPLIER_ID" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="SEND_SUPPLIER_ID" Type="nvarchar" MaxLength="50" Nullable="true" />
+        </EntityType>
+        <EntityType Name="T_JC_Task">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StartTime" Type="datetime" Nullable="false" />
+          <Property Name="EndTime" Type="datetime" Nullable="false" />
+          <Property Name="WageAccuracy" Type="int" Nullable="false" />
+          <Property Name="CollectlType" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="IsDelete" Type="bit" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Address_ID" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="30" Nullable="true" />
+          <Property Name="OrderID" Type="nvarchar" MaxLength="30" Nullable="true" />
+          <Property Name="ShiKaiRate" Type="nvarchar" MaxLength="200" Nullable="true" />
+          <Property Name="NotShiKaiRate" Type="nvarchar" MaxLength="200" Nullable="true" />
+          <Property Name="CollectProduct" Type="int" Nullable="false" />
+          <Property Name="TaskType" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_JC_File">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FileID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="FileName" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="FileType" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="TaskId" Type="int" Nullable="true" />
+          <Property Name="CreateTime" Type="datetime" Nullable="true" />
+          <Property Name="IsDelete" Type="bit" Nullable="true" />
+        </EntityType>
+        <EntityType Name="T_JC_DataItemTemp">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="order_id" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="UNIQ_NO" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="EMP_NAME" Type="nvarchar" MaxLength="200" Nullable="true" />
+          <Property Name="CER_TYPE" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="EMP_ID_CARD" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="EMP_IN_CODE" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="COST_CENT_NO" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="PER_PKG_NAME" Type="nvarchar" MaxLength="200" Nullable="true" />
+          <Property Name="REG_NO" Type="nvarchar" MaxLength="30" Nullable="true" />
+          <Property Name="UNIT_REG_NO" Type="nvarchar" MaxLength="30" Nullable="true" />
+          <Property Name="UNIT_NO" Type="nvarchar" MaxLength="30" Nullable="true" />
+          <Property Name="UNIT_NAME_PRINT" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="INS_DECL_WAGE" Type="nvarchar" MaxLength="30" Nullable="true" />
+          <Property Name="INS_BASE_WAGE" Type="nvarchar" MaxLength="30" Nullable="true" />
+          <Property Name="ACCU_DECL_WAGE" Type="nvarchar" MaxLength="30" Nullable="true" />
+          <Property Name="ACCU_BASE_WAGE" Type="nvarchar" MaxLength="30" Nullable="true" />
+          <Property Name="BUSI_CUST_NO" Type="nvarchar" MaxLength="30" Nullable="true" />
+          <Property Name="BUSI_CUST_NAME" Type="nvarchar" MaxLength="200" Nullable="true" />
+          <Property Name="CONT_NO" Type="nvarchar" MaxLength="30" Nullable="true" />
+          <Property Name="CONT_NAME" Type="nvarchar" MaxLength="200" Nullable="true" />
+          <Property Name="ACCE_NO" Type="nvarchar" MaxLength="30" Nullable="true" />
+          <Property Name="ACCE_NAME" Type="nvarchar" MaxLength="200" Nullable="true" />
+          <Property Name="RECE_ORG_NAME" Type="nvarchar" MaxLength="200" Nullable="true" />
+          <Property Name="RECE_USER" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="RECE_LOGIN_NAME" Type="nvarchar" MaxLength="30" Nullable="true" />
+          <Property Name="SEND_ORG_NAME" Type="nvarchar" MaxLength="200" Nullable="true" />
+          <Property Name="SEND_USER" Type="nvarchar" MaxLength="30" Nullable="true" />
+          <Property Name="SEND_LOGIN_NAME" Type="nvarchar" MaxLength="200" Nullable="true" />
+          <Property Name="SEND_LOGIN_EMAIL" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="SUPP_NAME" Type="nvarchar" MaxLength="200" Nullable="true" />
+          <Property Name="SUPP_NO" Type="nvarchar" MaxLength="30" Nullable="true" />
+          <Property Name="AREA_ID" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="COLLT_TYPE" Type="nvarchar" MaxLength="30" Nullable="true" />
+          <Property Name="PER_PKG_ID" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="BUSI_CUST_ID" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="CUST_CON_ID" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="CON_ACCE_ID" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="RECE_ORG_ID" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="RECE_USER_ID" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="SEND_ORG_ID" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="SEND_USER_ID" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="JC_Task_ID" Type="int" Nullable="true" />
+          <Property Name="CreateTime" Type="datetime" Nullable="true" />
+          <Property Name="IsDelete" Type="bit" Nullable="true" />
+          <Property Name="RECE_SUPPLIERR_NAME" Type="nvarchar" MaxLength="200" Nullable="true" />
+          <Property Name="APEA" Type="nvarchar" MaxLength="200" Nullable="true" />
+          <Property Name="PRODUCTTYPE" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="PRODUCTID" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="RECE_SUPPLIER_ID" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="SEND_SUPPLIER_ID" Type="nvarchar" MaxLength="50" Nullable="true" />
+        </EntityType>
+        <EntityType Name="T_JC_TaskUnit">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CON_ACCE_ID" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="BUSI_CUST_NO" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="UNIT_NO" Type="nvarchar" MaxLength="30" Nullable="true" />
+          <Property Name="Address_ID" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="AccountID" Type="int" Nullable="true" />
+          <Property Name="AccountName" Type="nvarchar" MaxLength="30" Nullable="true" />
+          <Property Name="IsDelete" Type="bit" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="TaskId" Type="int" Nullable="true" />
+          <Property Name="StartTime" Type="datetime" Nullable="true" />
+          <Property Name="EndTime" Type="datetime" Nullable="true" />
+          <Property Name="State" Type="int" Nullable="true" />
+          <Property Name="CONT_NO" Type="nvarchar" MaxLength="30" Nullable="true" />
+          <Property Name="ACCE_NO" Type="nvarchar" MaxLength="30" Nullable="true" />
+          <Property Name="SUPP_NO" Type="nvarchar" MaxLength="30" Nullable="true" />
+          <Property Name="IsNeedCollectTable" Type="bit" Nullable="true" />
+          <Property Name="IsNeedAuditing" Type="bit" Nullable="true" />
+          <Property Name="AuditingState" Type="int" Nullable="true" />
+          <Property Name="AuditingAccountName" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="AuditingAccountID" Type="int" Nullable="true" />
+          <Property Name="CollectionTableNo" Type="nvarchar" MaxLength="30" Nullable="true" />
+          <Property Name="CollectlType" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="CollectlProduct" Type="int" Nullable="false" />
+          <Property Name="ShiKaiRate" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="NotShiKaiRate" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="SheBaoCapValue" Type="nvarchar" MaxLength="20" Nullable="true" />
+          <Property Name="GongJiJinCapValue" Type="nvarchar" MaxLength="20" Nullable="true" />
+        </EntityType>
+        <Association Name="T_Admin_Account_T_Admin_Depart">
+          <End Role="T_Admin_Depart" Type="Self.T_Admin_Depart" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="T_Admin_Account" Type="Self.T_Admin_Account" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Admin_Depart">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="T_Admin_Account">
+              <PropertyRef Name="DepartID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="T_JC_File_T_JC_Task">
+          <End Role="T_JC_Task" Type="Self.T_JC_Task" Multiplicity="0..1" />
+          <End Role="T_JC_File" Type="Self.T_JC_File" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_JC_Task">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="T_JC_File">
+              <PropertyRef Name="TaskId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="T_JC_DataItem_T_JC_Task">
+          <End Role="T_JC_Task" Type="Self.T_JC_Task" Multiplicity="0..1" />
+          <End Role="T_JC_DataItem" Type="Self.T_JC_DataItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_JC_Task">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="T_JC_DataItem">
+              <PropertyRef Name="JC_Task_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CodeFirstDatabase">
+          <EntitySet Name="ApiInputLog" EntityType="Self.ApiInputLog" Schema="dbo" Table="ApiInputLog" />
+          <EntitySet Name="ApiOutputLog" EntityType="Self.ApiOutputLog" Schema="dbo" Table="ApiOutputLog" />
+          <EntitySet Name="D_JC_Address" EntityType="Self.D_JC_Address" Schema="dbo" Table="D_JC_Address" />
+          <EntitySet Name="Log" EntityType="Self.Log" Schema="dbo" Table="Log" />
+          <EntitySet Name="T_Admin_Account" EntityType="Self.T_Admin_Account" Schema="dbo" Table="T_Admin_Account" />
+          <EntitySet Name="T_Admin_Depart" EntityType="Self.T_Admin_Depart" Schema="dbo" Table="T_Admin_Depart" />
+          <EntitySet Name="T_Admin_AcountRole" EntityType="Self.T_Admin_AcountRole" Schema="dbo" Table="T_Admin_AcountRole" />
+          <EntitySet Name="T_Admin_Menu" EntityType="Self.T_Admin_Menu" Schema="dbo" Table="T_Admin_Menu" />
+          <EntitySet Name="T_Admin_MenuData" EntityType="Self.T_Admin_MenuData" Schema="dbo" Table="T_Admin_MenuData" />
+          <EntitySet Name="T_Admin_MenuData_RolePrivilege" EntityType="Self.T_Admin_MenuData_RolePrivilege" Schema="dbo" Table="T_Admin_MenuData_RolePrivilege" />
+          <EntitySet Name="T_Admin_Role" EntityType="Self.T_Admin_Role" Schema="dbo" Table="T_Admin_Role" />
+          <EntitySet Name="T_Admin_RoleData" EntityType="Self.T_Admin_RoleData" Schema="dbo" Table="T_Admin_RoleData" />
+          <EntitySet Name="T_Admin_RoleData_RolePrivilege" EntityType="Self.T_Admin_RoleData_RolePrivilege" Schema="dbo" Table="T_Admin_RoleData_RolePrivilege" />
+          <EntitySet Name="T_Admin_RolePrivilege" EntityType="Self.T_Admin_RolePrivilege" Schema="dbo" Table="T_Admin_RolePrivilege" />
+          <EntitySet Name="T_JC_Account" EntityType="Self.T_JC_Account" Schema="dbo" Table="T_JC_Account" />
+          <EntitySet Name="T_JC_DataItem" EntityType="Self.T_JC_DataItem" Schema="dbo" Table="T_JC_DataItem" />
+          <EntitySet Name="T_JC_Task" EntityType="Self.T_JC_Task" Schema="dbo" Table="T_JC_Task" />
+          <EntitySet Name="T_JC_File" EntityType="Self.T_JC_File" Schema="dbo" Table="T_JC_File" />
+          <EntitySet Name="T_JC_DataItemTemp" EntityType="Self.T_JC_DataItemTemp" Schema="dbo" Table="T_JC_DataItemTemp" />
+          <EntitySet Name="T_JC_TaskUnit" EntityType="Self.T_JC_TaskUnit" Schema="dbo" Table="T_JC_TaskUnit" />
+          <AssociationSet Name="T_Admin_Account_T_Admin_Depart" Association="Self.T_Admin_Account_T_Admin_Depart">
+            <End Role="T_Admin_Depart" EntitySet="T_Admin_Depart" />
+            <End Role="T_Admin_Account" EntitySet="T_Admin_Account" />
+          </AssociationSet>
+          <AssociationSet Name="T_JC_File_T_JC_Task" Association="Self.T_JC_File_T_JC_Task">
+            <End Role="T_JC_Task" EntitySet="T_JC_Task" />
+            <End Role="T_JC_File" EntitySet="T_JC_File" />
+          </AssociationSet>
+          <AssociationSet Name="T_JC_DataItem_T_JC_Task" Association="Self.T_JC_DataItem_T_JC_Task">
+            <End Role="T_JC_Task" EntitySet="T_JC_Task" />
+            <End Role="T_JC_DataItem" EntitySet="T_JC_DataItem" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </StorageModels>
+  </Runtime>
+  <Designer>
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="ProcessDependentTemplatesOnSave" Value="False" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <Diagrams>
+      <Diagram DiagramId="0d2fe20cfc9c4576a8dd3d88866361e6" Name="Diagram1">
+        <EntityTypeShape EntityType="FescoFast.EFPowerTools.Models.ApiInputLog" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FescoFast.EFPowerTools.Models.ApiOutputLog" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FescoFast.EFPowerTools.Models.D_JC_Address" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FescoFast.EFPowerTools.Models.Log" Width="1.5" PointX="7.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FescoFast.EFPowerTools.Models.T_Admin_Account" Width="1.5" PointX="5.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FescoFast.EFPowerTools.Models.T_Admin_Depart" Width="1.5" PointX="8" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="FescoFast.EFPowerTools.Models.T_Admin_AcountRole" Width="1.5" PointX="9.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FescoFast.EFPowerTools.Models.T_Admin_Menu" Width="1.5" PointX="9.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FescoFast.EFPowerTools.Models.T_Admin_MenuData" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FescoFast.EFPowerTools.Models.T_Admin_MenuData_RolePrivilege" Width="1.5" PointX="4.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FescoFast.EFPowerTools.Models.T_Admin_Role" Width="1.5" PointX="11.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FescoFast.EFPowerTools.Models.T_Admin_RoleData" Width="1.5" PointX="6.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FescoFast.EFPowerTools.Models.T_Admin_RoleData_RolePrivilege" Width="1.5" PointX="11.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FescoFast.EFPowerTools.Models.T_Admin_RolePrivilege" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FescoFast.EFPowerTools.Models.T_JC_Account" Width="1.5" PointX="11.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FescoFast.EFPowerTools.Models.T_JC_DataItem" Width="1.5" PointX="0.75" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FescoFast.EFPowerTools.Models.T_JC_Task" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="FescoFast.EFPowerTools.Models.T_JC_File" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FescoFast.EFPowerTools.Models.T_JC_DataItemTemp" Width="1.5" PointX="13.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FescoFast.EFPowerTools.Models.T_JC_TaskUnit" Width="1.5" PointX="15.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="FescoFast.EFPowerTools.Models.T_Admin_Account_T_Admin_Depart" ManuallyRouted="false" />
+        <AssociationConnector Association="FescoFast.EFPowerTools.Models.T_JC_File_T_JC_Task" ManuallyRouted="false" />
+        <AssociationConnector Association="FescoFast.EFPowerTools.Models.T_JC_DataItem_T_JC_Task" ManuallyRouted="false" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</Edmx>

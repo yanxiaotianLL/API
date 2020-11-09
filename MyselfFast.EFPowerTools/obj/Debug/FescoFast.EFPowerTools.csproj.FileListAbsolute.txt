@@ -1,0 +1,15 @@
+D:\fesco\SVN\FescoFast_Fund\Fescofast.Fund\FescoFast.EFPowerTools\bin\Debug\App.config
+D:\fesco\SVN\FescoFast_Fund\Fescofast.Fund\FescoFast.EFPowerTools\bin\Debug\FescoFast.EFPowerTools.exe.config
+D:\fesco\SVN\FescoFast_Fund\Fescofast.Fund\FescoFast.EFPowerTools\bin\Debug\FescoFast.EFPowerTools.exe
+D:\fesco\SVN\FescoFast_Fund\Fescofast.Fund\FescoFast.EFPowerTools\bin\Debug\FescoFast.EFPowerTools.pdb
+D:\fesco\SVN\FescoFast_Fund\Fescofast.Fund\FescoFast.EFPowerTools\bin\Debug\CommandLineParser.dll
+D:\fesco\SVN\FescoFast_Fund\Fescofast.Fund\FescoFast.EFPowerTools\bin\Debug\EntityFramework.dll
+D:\fesco\SVN\FescoFast_Fund\Fescofast.Fund\FescoFast.EFPowerTools\bin\Debug\EntityFramework.SqlServer.dll
+D:\fesco\SVN\FescoFast_Fund\Fescofast.Fund\FescoFast.EFPowerTools\bin\Debug\EntityFramework.xml
+D:\fesco\SVN\FescoFast_Fund\Fescofast.Fund\FescoFast.EFPowerTools\bin\Debug\EntityFramework.SqlServer.xml
+D:\fesco\SVN\FescoFast_Fund\Fescofast.Fund\FescoFast.EFPowerTools\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\fesco\SVN\FescoFast_Fund\Fescofast.Fund\FescoFast.EFPowerTools\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+D:\fesco\SVN\FescoFast_Fund\Fescofast.Fund\FescoFast.EFPowerTools\obj\Debug\FescoFast.EFPowerTools.Properties.Resources.resources
+D:\fesco\SVN\FescoFast_Fund\Fescofast.Fund\FescoFast.EFPowerTools\obj\Debug\FescoFast.EFPowerTools.csproj.GenerateResource.Cache
+D:\fesco\SVN\FescoFast_Fund\Fescofast.Fund\FescoFast.EFPowerTools\obj\Debug\FescoFast.EFPowerTools.exe
+D:\fesco\SVN\FescoFast_Fund\Fescofast.Fund\FescoFast.EFPowerTools\obj\Debug\FescoFast.EFPowerTools.pdb

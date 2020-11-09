@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<IpAndDomainConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <IsIpSwitch>true</IsIpSwitch>
+  <!--ciming-->
+  <IpFilterings>
+    <IpFiltering>
+      <FilterType>Allowed</FilterType>
+      <IpAddress>192.168.0.2</IpAddress>
+    </IpFiltering>
+  </IpFilterings>
+</IpAndDomainConfiguration>

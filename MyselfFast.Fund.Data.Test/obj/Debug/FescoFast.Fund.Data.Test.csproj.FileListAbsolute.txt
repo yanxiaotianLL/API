@@ -1,0 +1,12 @@
+D:\fesco\SVN\FescoFast_Fund\Fescofast.Fund\FescoFast.Fund.Data.Test\bin\Debug\FescoFast.Collect.Data.Test.dll
+D:\fesco\SVN\FescoFast_Fund\Fescofast.Fund\FescoFast.Fund.Data.Test\bin\Debug\FescoFast.Collect.Data.Test.pdb
+D:\fesco\SVN\FescoFast_Fund\Fescofast.Fund\FescoFast.Fund.Data.Test\obj\Debug\FescoFast.Collect.Data.Test.dll
+D:\fesco\SVN\FescoFast_Fund\Fescofast.Fund\FescoFast.Fund.Data.Test\obj\Debug\FescoFast.Collect.Data.Test.pdb
+D:\阿里云服务器\CodeMe\API项目\Fescofast.Fund\FescoFast.Fund.Data.Test\bin\Debug\FescoFast.Collect.Data.Test.dll
+D:\阿里云服务器\CodeMe\API项目\Fescofast.Fund\FescoFast.Fund.Data.Test\bin\Debug\FescoFast.Collect.Data.Test.pdb
+D:\阿里云服务器\CodeMe\API项目\Fescofast.Fund\FescoFast.Fund.Data.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\阿里云服务器\CodeMe\API项目\Fescofast.Fund\FescoFast.Fund.Data.Test\bin\Debug\zh-Hans\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+D:\阿里云服务器\CodeMe\API项目\Fescofast.Fund\FescoFast.Fund.Data.Test\obj\Debug\FescoFast.Fund.Data.Test.csproj.CoreCompileInputs.cache
+D:\阿里云服务器\CodeMe\API项目\Fescofast.Fund\FescoFast.Fund.Data.Test\obj\Debug\FescoFast.Fund.Data.Test.csproj.CopyComplete
+D:\阿里云服务器\CodeMe\API项目\Fescofast.Fund\FescoFast.Fund.Data.Test\obj\Debug\FescoFast.Collect.Data.Test.dll
+D:\阿里云服务器\CodeMe\API项目\Fescofast.Fund\FescoFast.Fund.Data.Test\obj\Debug\FescoFast.Collect.Data.Test.pdb

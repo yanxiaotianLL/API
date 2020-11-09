@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="c19d89e0-1990-44d8-a808-716ecf0ccd39" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="edc0a942-797d-4313-ac2d-0c85bcae224a" name="Layer1" />
+    <layer Id="24d49793-8a70-4740-95c9-24066f449f21" name="Layer2" />
+  </layers>
+</layerModel>

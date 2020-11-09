@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F12DA99D-D6DD-476F-BCD3-97DC4D0B3C69}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FescoFast.Fund.Data</RootNamespace>
+    <AssemblyName>FescoFast.Fund.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\lib\net40\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataReaderExtensions.cs" />
+    <Compile Include="DbContextExtensions.cs" />
+    <Compile Include="EfDataProviderManager.cs" />
+    <Compile Include="EFIntercepterLogging.cs" />
+    <Compile Include="EfRepository.cs" />
+    <Compile Include="EfStartUpTask.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="IDbContext.cs" />
+    <Compile Include="Initializers\CreateCeDatabaseIfNotExists.cs" />
+    <Compile Include="Initializers\CreateTablesIfNotExist.cs" />
+    <Compile Include="Initializers\DropCreateCeDatabaseAlways.cs" />
+    <Compile Include="Initializers\DropCreateCeDatabaseIfModelChanges.cs" />
+    <Compile Include="Initializers\SqlCeInitializer.cs" />
+    <Compile Include="FescoFastObjectContext.cs" />
+    <Compile Include="Mapping\Admin\T_Admin_AccountMap.cs" />
+    <Compile Include="Mapping\Admin\T_Admin_AcountRoleMap.cs" />
+    <Compile Include="Mapping\Admin\T_Admin_DepartMap.cs" />
+    <Compile Include="Mapping\Admin\T_Admin_MenuDataMap.cs" />
+    <Compile Include="Mapping\Admin\T_Admin_MenuData_RolePrivilegeMap.cs" />
+    <Compile Include="Mapping\Admin\T_Admin_MenuMap.cs" />
+    <Compile Include="Mapping\Admin\T_Admin_PasswordSignHistoryMap.cs" />
+    <Compile Include="Mapping\Admin\T_Admin_RoleDataMap.cs" />
+    <Compile Include="Mapping\Admin\T_Admin_RoleData_RolePrivilegeMap.cs" />
+    <Compile Include="Mapping\Admin\T_Admin_RoleMap.cs" />
+    <Compile Include="Mapping\Admin\T_Admin_RolePrivilegeMap.cs" />
+    <Compile Include="Mapping\Admin\T_Admin_Visit_HistoryMap.cs" />
+    <Compile Include="Mapping\Banner\T_Helo_ImgMap.cs" />
+    <Compile Include="Mapping\Company\T_CompanyMap.cs" />
+    <Compile Include="Mapping\Company\T_Company_AppointmentMap.cs" />
+    <Compile Include="Mapping\Company\T_Company_SubsidiesMap.cs" />
+    <Compile Include="Mapping\Company\T_Company_UserMap.cs" />
+    <Compile Include="Mapping\ExportImport\T_Sys_ImportFilesMap.cs" />
+    <Compile Include="Mapping\FescoFastEntityTypeConfiguration.cs" />
+    <Compile Include="Mapping\HuKouSettled\T_HK_DictionaryMap.cs" />
+    <Compile Include="Mapping\HuKouSettled\T_HK_Settled_FileItemMap.cs" />
+    <Compile Include="Mapping\HuKouSettled\T_HK_Settled_SpecdayMap.cs" />
+    <Compile Include="Mapping\HuKouSettled\T_Sys_IdCardInfoMap.cs" />
+    <Compile Include="Mapping\HuKouSettled\T_HK_Settled_InfoMap.cs" />
+    <Compile Include="Mapping\Hukou\T_HK_Hokou_TransferMap.cs" />
+    <Compile Include="Mapping\Hukou\T_HK_Hukou_LendMap.cs" />
+    <Compile Include="Mapping\Hukou\T_HK_HuKou_NumMap.cs" />
+    <Compile Include="Mapping\Hukou\T_HK_OrderMap.cs" />
+    <Compile Include="Mapping\Hukou\V_HK_Order_ListMap.cs" />
+    <Compile Include="Mapping\ExportImport\T_Sys_ExportFilesMap.cs" />
+    <Compile Include="Mapping\Sys\T_Sys_DicMap.cs" />
+    <Compile Include="Mapping\Peixun\T_Trn_StuMap.cs" />
+    <Compile Include="Mapping\Peixun\T_Trn_StuRecMap.cs" />
+    <Compile Include="Mapping\Peixun\T_Trn_LabelMap.cs" />
+    <Compile Include="Mapping\Peixun\T_Trn_CozInfoMap.cs" />
+    <Compile Include="Mapping\T_Helo_MsgLogMap.cs" />
+    <Compile Include="Mapping\T_Sys_FileMap.cs" />
+    <Compile Include="Mapping\T_Fes_UserMap.cs" />
+    <Compile Include="Mapping\ViewEntity\V_Company.cs" />
+    <Compile Include="Mapping\V_CD_PROVINCEMap.cs" />
+    <Compile Include="Mapping\T_Tb_dictionarylistMap.cs" />
+    <Compile Include="Mapping\V_CD_XIANMap.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryableExtensions.cs" />
+    <Compile Include="SqlCeDataProvider.cs" />
+    <Compile Include="SqlServerDataProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyselfFast.Fund.Core\MyselfFast.Fund.Core.csproj">
+      <Project>{94666936-6950-4385-8d02-7f318de8f32a}</Project>
+      <Name>MyselfFast.Fund.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Initializers\Initializers.cd" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

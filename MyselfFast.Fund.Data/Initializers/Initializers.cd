@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Nop.Data.Initializers.CreateCeDatabaseIfNotExists&lt;TContext&gt;" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Initializers\CreateCeDatabaseIfNotExists.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nop.Data.Initializers.CreateTablesIfNotExist&lt;TContext&gt;" Collapsed="true">
+    <Position X="8.5" Y="0.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAIAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Initializers\CreateTablesIfNotExist.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Nop.Data.Initializers.DropCreateCeDatabaseAlways&lt;TContext&gt;" Collapsed="true">
+    <Position X="9.5" Y="1.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Initializers\DropCreateCeDatabaseAlways.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nop.Data.Initializers.DropCreateCeDatabaseIfModelChanges&lt;TContext&gt;" Collapsed="true">
+    <Position X="4.5" Y="1.75" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Initializers\DropCreateCeDatabaseIfModelChanges.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nop.Data.Initializers.SqlCeInitializer&lt;T&gt;" Collapsed="true">
+    <Position X="5.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAgAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Initializers\SqlCeInitializer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

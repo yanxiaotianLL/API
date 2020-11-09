@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<FileConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <myselfFileServerConfiguration>
+    <ServerUrl>http://helofile.myself.com.cn/index.jpg</ServerUrl>
+    <Channels>MedicalExamin,EntryInformation,EntryBackground,FundextPdf</Channels>
+  </myselfFileServerConfiguration>
+  <OSSFileConfiguration>
+    <Endpoint>https://oss-cn-beijing.aliyuncs.com</Endpoint>
+    <AccessKeyId>aJNl6TNW5GFYLh1A</AccessKeyId>
+    <AccessKeySecret>SGLguAOXYMhG3uO19d8FeTJNuLuphr</AccessKeySecret>
+    <DefaultBucketName>hejin-test</DefaultBucketName>
+    <KeyPrefix>myself/ffyw</KeyPrefix>
+  </OSSFileConfiguration>
+</FileConfiguration>

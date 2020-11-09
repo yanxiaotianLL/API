@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<EmailConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <EmailServer>
+    <EmailFromAddress>website@myselfweekly.com.cn</EmailFromAddress>
+    <EmailFromPassword>FpgNPQqNkd9Sw6FMgK3qEy9I6boP30mZE/3P7vSq6aM=</EmailFromPassword>
+    <EmailHostIP>192.168.0.37</EmailHostIP>
+    <EmailHostPort>465</EmailHostPort>
+  </EmailServer>
+  <EmailUserGroups>
+    <UserGroups>
+      <EmailUserGroup>
+        <Id>1</Id>
+        <GroupName>体检管理员</GroupName>
+        <EmailUsers>
+          <EmailUser>
+            <Id>1</Id>
+            <Name>朱志鹏</Name>
+            <Email>zhu.zhi.peng@myself.com.cn</Email>
+          </EmailUser>
+        </EmailUsers>
+      </EmailUserGroup>
+      <EmailUserGroup>
+        <Id>2</Id>
+        <GroupName>补医保管理员</GroupName>
+        <EmailUsers>
+          <EmailUser>
+            <Id>1</Id>
+            <Name>李文典</Name>
+            <Email>li.wen.dian@myself.com.cn</Email>
+          </EmailUser>
+        </EmailUsers>
+      </EmailUserGroup>
+    </UserGroups>
+  </EmailUserGroups>
+</EmailConfiguration>

@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="0601870b-14bd-4a48-9bf6-d58335991ef5" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="924b646e-de6c-4d0d-ae46-41207e3a18b6" name="Client">
+      <childLayers>
+        <layer Id="d48e6425-9a92-4e56-b9b4-8e367f51f2e1" name="外网">
+          <childLayers>
+            <layer Id="5225b664-b85d-4349-80c0-1dfdc5fe5a3d" name="Sign">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="47e133f3-4075-46a6-a702-0b5afb7476bb" direction="Forward">
+                  <layerMoniker Id="1c8b019d-bca5-4170-bb97-0705995c6140" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+            </layer>
+            <layer Id="e272a1e6-236d-4493-89f8-9d49d9c257c8" name="TOKEN">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="2482568f-2bb2-4c9e-bc0a-cbf482544ceb" name="获取TOKEN令牌" direction="Forward">
+                  <layerMoniker Id="047d536f-0966-4b79-b54b-755855a849d9" />
+                  <description>获取TOKEN令牌</description>
+                </dependencyFromLayerToLayer>
+                <dependencyFromLayerToLayer Id="4f7326ac-11c0-4f4e-bd0c-1dfa83e2404c" direction="Forward">
+                  <layerMoniker Id="9c4e8e3a-3d98-4633-bafe-09df8a00947c" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+            </layer>
+          </childLayers>
+        </layer>
+        <layer Id="615ba2de-d7ab-4127-88dc-311c09733eb2" name="内网">
+          <childLayers>
+            <layer Id="541437fa-bd27-480e-b206-82b6e199c178" name="内网IP">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="9beb71e5-207a-4642-a1e6-f102766ae538" direction="Forward">
+                  <layerMoniker Id="dddd21d3-567b-4167-bb04-cc2c06df1d31" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+            </layer>
+          </childLayers>
+        </layer>
+      </childLayers>
+    </layer>
+    <layer Id="ea8873fd-f3d8-4793-a3f9-d0a97170efdb" name="权限验证层系统">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="599cf5c9-ea84-48ec-933f-b41a3be1d68d" direction="Forward">
+          <layerMoniker Id="d4f3f01a-7c83-433d-baf5-3e0f825c3d76" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="1c8b019d-bca5-4170-bb97-0705995c6140" name="企业端">
+          <childLayers>
+            <layer Id="8ea2c28a-de24-4cfd-92da-487e583d3818" name="企业账号" />
+            <layer Id="79f712b6-3389-49d9-8cf0-42e7f45b77c6" name="SIGN验证" />
+          </childLayers>
+        </layer>
+        <layer Id="7ec9687a-cc66-4bb0-9e47-52a97d7d937a" name="前端页面">
+          <childLayers>
+            <layer Id="047d536f-0966-4b79-b54b-755855a849d9" name="SSO" />
+            <layer Id="9c4e8e3a-3d98-4633-bafe-09df8a00947c" name="TOKEN" />
+          </childLayers>
+        </layer>
+        <layer Id="586e0741-ccbd-4384-b4a8-0865e52e1e5c" name="内网子系统">
+          <childLayers>
+            <layer Id="dddd21d3-567b-4167-bb04-cc2c06df1d31" name="IP白名单" />
+          </childLayers>
+        </layer>
+        <layer Id="595297b8-d83c-44a0-918f-2b75dc30965f" name="日志采集" />
+      </childLayers>
+    </layer>
+    <layer Id="d4f3f01a-7c83-433d-baf5-3e0f825c3d76" name="服务层系统(Server)">
+      <childLayers>
+        <layer Id="3bda2357-fba9-45b4-8539-65193e3dd37e" name="HELO" />
+        <layer Id="aa205fef-522b-4a48-b747-1afc82082611" name="SHOP" />
+        <layer Id="86a4a17a-43b5-49b3-a577-0af002f206fd" name="集采" />
+        <layer Id="912ec848-1099-4854-9748-22cd3f38d9b8" name="……" />
+      </childLayers>
+    </layer>
+  </layers>
+</layerModel>
